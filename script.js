@@ -1,0 +1,1 @@
+$("#button").delay(2000).animate({ opacity: 1 }, 700)
