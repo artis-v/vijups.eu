@@ -11,6 +11,7 @@ window.onload = function() {
 
     // 2: load large image 
     var imgLarge = new Image();
+    imgLarge.alt = 'Forest in Tīnūži';
     imgLarge.src = placeholder.dataset.large; 
     imgLarge.onload = function () {
         imgLarge.classList.add('loaded');
