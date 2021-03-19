@@ -2,11 +2,11 @@
 
     ExpiresActive on
 
-    ExpiresByType image/webp                "access 1 year"
-    ExpiresByType video/webm                "access 1 year"
-    ExpiresByType font/woff2                "access 1 year"
-    ExpiresByType image/x-icon              "access 1 year"
+    ExpiresByType image/webp                "access 3 months"
+    ExpiresByType video/webm                "access 3 months"
+    ExpiresByType font/woff2                "access 3 months"
+    ExpiresByType image/x-icon              "access 3 months"
 
-    ExpiresDefault                          "access 1 day"
+    ExpiresDefault                          "access 3 days"
 
 </IfModule>
