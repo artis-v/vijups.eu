@@ -1,7 +1,12 @@
 <IfModule mod_expires.c>
 
-  ExpiresByType image/webp                "access plus 1 year"
-  ExpiresByType video/webm                "access plus 1 year"
-  ExpiresByType font/woff2                "access plus 1 year"
+    ExpiresActive on
+
+    ExpiresByType image/webp                "access plus 1 year"
+    ExpiresByType video/webm                "access plus 1 year"
+    ExpiresByType font/woff2                "access plus 1 year"
+    ExpiresByType image/x-icon              "access plus 1 year"
+
+    ExpiresDefault                          "access plus 600 seconds"
 
 </IfModule>
