@@ -1,4 +1,0 @@
-//Caching schema
-<FilesMatch "\.(webp|webm|woff2|x-icon)$">
-Header set Cache-Control "max-age=482112000"
-</FilesMatch>
