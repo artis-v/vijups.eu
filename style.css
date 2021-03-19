@@ -21,13 +21,22 @@ div#content {
     width: 100%;
 }
 
-div#content img {
+div#content video {
     display: block;
     margin: 0 auto;
     width: min(500px, 80%);
 }
 
 /* Button */
+
+@keyframes buttonAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
 
 a {
     background-color: #CB7109;
@@ -37,7 +46,7 @@ a {
     margin: 0 auto;
     font-size: 18px;
     line-height: 24px;
-    opacity: 0;
+    animation: 0.7s ease-out 0s 1 buttonAnimation;
     padding: 12px 32px 12px 82px;
     position: relative;
     text-decoration: none;
