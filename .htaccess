@@ -1,12 +1,4 @@
-<IfModule mod_expires.c>
-
-    ExpiresActive on
-
-    ExpiresByType image/webp                "access 3 months"
-    ExpiresByType video/webm                "access 3 months"
-    ExpiresByType font/woff2                "access 3 months"
-    ExpiresByType image/x-icon              "access 3 months"
-
-    ExpiresDefault                          "access 3 days"
-
-</IfModule>
+//Caching schema
+<FilesMatch "\.(webp|webm|woff2|x-icon)$">
+Header set Cache-Control "max-age=482112000"
+</FilesMatch>
