@@ -276,6 +276,12 @@ div#formcontent textarea {
 
 }
 
+div#content p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
 div#formcontent p {
     color: white;
     font-size: 18px;
