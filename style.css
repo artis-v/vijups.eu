@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Work Sans';
-    src: url('WorkSans-Medium.woff2'), url('WorkSans-Medium.woff2') format('woff2');
+    font-family: 'Commissioner';
+    src: url('Commissioner-Medium.woff2'), url('Commissioner-Medium.woff2') format('woff2');
 }
 
 * {
@@ -15,7 +15,7 @@ body {
 html {
     min-height: 100%;
     background-color: #131715;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Commissioner', sans-serif;
     font-weight: 500;
 }
 
@@ -247,7 +247,7 @@ div#formcontent input[type="text"], div#formcontent textarea {
     border: solid 1px;
     border-color: #3c8a62;
     padding: 15px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Commissioner', sans-serif;
     color: white;
     outline-width: 0;
     font-size: 16px;
@@ -340,7 +340,7 @@ div#languages {
     background-color: #131715;
     font-size: 18px;
     height: 32px;
-    width: 80px;
+    width: 115px;
     line-height: 32px;
     text-align: center;
 }

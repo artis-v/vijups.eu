@@ -7,6 +7,8 @@ window.onload = function() {
     }else{
         if(navigator.languages.includes('lv')){
             lang = 'lv';
+        }else if(navigator.languages.includes('ru')){
+            lang = 'ru';
         }else{
             lang = 'en';
         }
@@ -35,15 +37,18 @@ window.onload = function() {
 var J = JSON.parse(`{
     "thanks": {
         "en": "Thank you! Your message has been sent.",
-        "lv": "Paldies! Jūsu ziņa ir nosūtīta."
+        "lv": "Paldies! Jūsu ziņa ir nosūtīta.",
+        "ru": "Спасибо! Ваше сообщение отправлено."
     },
     "copy": {
         "en": "A copy of the message has been sent to the e-mail address you provided.",
-        "lv": "Ziņas kopija ir nosūtīta uz Jūsu norādīto e-pasta adresi."
+        "lv": "Ziņas kopija ir nosūtīta uz Jūsu norādīto e-pasta adresi.",
+        "ru": "Копия сообщения была отправлена на указанный вами е-мейл."
     },
     "back": {
         "en": "Go back",
-        "lv": "Atgriezties"
+        "lv": "Atgriezties",
+        "ru": "Возвращаться"
     }
 }`);
 
@@ -51,9 +56,15 @@ function applyTranslations(lang) {
     if(lang=='en'){
         document.getElementById('EN').classList = ['selected'];
         document.getElementById('LV').classList = ['not'];
-    }else{
+        document.getElementById('RU').classList = ['not'];
+    }else if(lang=='lv'){
         document.getElementById('EN').classList = ['not'];
         document.getElementById('LV').classList = ['selected'];
+        document.getElementById('RU').classList = ['not'];
+    }else{
+        document.getElementById('EN').classList = ['not'];
+        document.getElementById('LV').classList = ['not'];
+        document.getElementById('RU').classList = ['selected'];
     }
     document.getElementById('thanks').innerHTML = J['thanks'][lang];
     document.getElementById('copy').innerHTML = J['copy'][lang];

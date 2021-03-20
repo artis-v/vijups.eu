@@ -7,6 +7,8 @@ window.onload = function() {
     }else{
         if(navigator.languages.includes('lv')){
             lang = 'lv';
+        }else if(navigator.languages.includes('ru')){
+            lang = 'ru';
         }else{
             lang = 'en';
         }
@@ -97,43 +99,53 @@ function validate() {
 var J = JSON.parse(`{
     "contact": {
         "en": "Contact me",
-        "lv": "Sazinieties ar mani"
+        "lv": "Sazinieties ar mani",
+        "ru": "Свяжитесь со мной"
     },
     "formIntro1": {
         "en": "Send an e-mail to ",
-        "lv": "Nosūtiet e-pastu uz "
+        "lv": "Nosūtiet e-pastu uz ",
+        "ru": "Отправьте е-мейл на "
     },
     "formIntro2": {
         "en": " or fill out the form:",
-        "lv": " vai aizpildiet veidlapu:"
+        "lv": " vai aizpildiet veidlapu:",
+        "ru": " или заполните форму:"
     },
     "lbName": {
         "en": "Name",
-        "lv": "Vārds"
+        "lv": "Vārds",
+        "ru": "Имя"
     },
     "phName": {
         "en": "Your name...",
-        "lv": "Jūsu vārds..."
+        "lv": "Jūsu vārds...",
+        "ru": "Ваше имя..."
     },
     "lbEmail": {
         "en": "E-mail",
-        "lv": "E-pasts"
+        "lv": "E-pasts",
+        "ru": "Е-мейл"
     },
     "phEmail": {
         "en": "Your e-mail address...",
-        "lv": "Jūsu e-pasta adrese..."
+        "lv": "Jūsu e-pasta adrese...",
+        "ru": "Ваш е-мейл..."
     },
     "lbMessage": {
         "en": "Message",
-        "lv": "Ziņa"
+        "lv": "Ziņa",
+        "ru": "Сообщение"
     },
     "phMessage": {
         "en": "Your message...",
-        "lv": "Jūsu ziņa..."
+        "lv": "Jūsu ziņa...",
+        "ru": "Ваше сообщение..."
     },
     "send": {
         "en": "Send",
-        "lv": "Nosūtīt"
+        "lv": "Nosūtīt",
+        "ru": "Отправить"
     }
 }`);
 
@@ -141,9 +153,15 @@ function applyTranslations(lang) {
     if(lang=='en'){
         document.getElementById('EN').classList = ['selected'];
         document.getElementById('LV').classList = ['not'];
-    }else{
+        document.getElementById('RU').classList = ['not'];
+    }else if(lang=='lv'){
         document.getElementById('EN').classList = ['not'];
         document.getElementById('LV').classList = ['selected'];
+        document.getElementById('RU').classList = ['not'];
+    }else{
+        document.getElementById('EN').classList = ['not'];
+        document.getElementById('LV').classList = ['not'];
+        document.getElementById('RU').classList = ['selected'];
     }
     document.getElementById('buttonLabel').innerHTML = J['contact'][lang];
     document.getElementById('formIntro').innerHTML = J['formIntro1'][lang]+`<a href="mailto:artis.vijups@gmail.com">artis.vijups@gmail.com</a>`+J['formIntro2'][lang];
