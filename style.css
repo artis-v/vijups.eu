@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+body {
+    overflow: hidden;
+}
+
 html {
     min-height: 100%;
     background-color: #131715;
@@ -15,15 +19,36 @@ html {
     font-weight: 500;
 }
 
-div#content {
+@keyframes itemShift {
+    0% {
+        transform: translate(0%, -59%);
+    }
+    100% {
+        transform: translate(-25%, -59%);
+    }
+}
+
+@keyframes itemShiftBack {
+    0% {
+        transform: translate(-25%, -59%);
+    }
+    100% {
+        transform: translate(0%, -59%);
+    }
+}
+
+div#content, div#formcontent {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 0;
-    -ms-transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
-    text-align: center;
     width: 100%;
+    z-index: 3;
+}
+
+div#content {
+    transform: translate(0%, -59%);
+    text-align: center;
 }
 
 div#content video {
@@ -38,12 +63,33 @@ div#content video {
     0% {
         opacity: 0;
     }
+    30% {
+        opacity: 0;
+    }
     100% {
         opacity: 1;
     }
-  }
+}
 
-a {
+@keyframes fadeToGreen {
+    0% {
+        background-color: #CB7109;
+    }
+    100% {
+        background-color: #131715;
+    }
+}
+
+@keyframes fadeToAmber {
+    0% {
+        background-color: #131715;
+    }
+    100% {
+        background-color: #CB7109;
+    }
+}
+
+a.button {
     background-color: #CB7109;
     color: white;
     clear: left;
@@ -51,25 +97,29 @@ a {
     margin: 0 auto;
     font-size: 18px;
     line-height: 24px;
-    animation: 0.7s ease-out 0s 1 buttonAnimation;
     padding: 12px 32px 12px 82px;
     position: relative;
     text-decoration: none;
+    cursor: pointer;
 }
 
-a .label,
-a .icon-arrow {
+a#button { 
+    animation: 1s ease-out 0s 1 buttonAnimation;
+}
+
+a.button .label,
+a.button .icon-arrow {
     backface-visibility: hidden;
     transform: translateZ(0);
     perspective: 1000;
 }
 
-a .label {
+a.button .label {
     display: inline-block;
     transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-a .icon-arrow {
+a.button .icon-arrow {
     fill: white;
     height: 15px;
     top: 17px;
@@ -77,14 +127,14 @@ a .icon-arrow {
     width: 35px;
 }
 
-a .icon-arrow.before {
+a.button .icon-arrow.before {
     left: 32px;
     margin-right: 15px;
     position: absolute;
     transform-origin: left center;
 }
 
-a .icon-arrow.after {
+a.button .icon-arrow.after {
     margin-left: 15px;
     opacity: 0;
     position: absolute;
@@ -93,25 +143,29 @@ a .icon-arrow.after {
     transform-origin: right center;
 }
 
-a:hover .label {
+a.button:hover .label, a.button.force .label {
     transform: translateX(-52px);
 }
 
-a:hover .icon-arrow.before {
+a.button:hover .icon-arrow.before, a.button.force .icon-arrow.before {
     opacity: 0;
     transform: translateX(-75%) scaleX(0.1);
 }
 
-a:hover .icon-arrow.after {
+a.button:hover .icon-arrow.after, a.button.force .icon-arrow.after {
     opacity: 1;
     transform: translateX(0) scaleX(1);
 }
 
 /* progressive image loading */
 
+div#left {
+    width: 50%;
+}
+
 .placeholder {
     height: 100vh;
-    width: 100vw;
+    width: inherit;
 }
 
 .placeholder img {
@@ -125,12 +179,145 @@ a:hover .icon-arrow.after {
     transition: opacity 1s linear;
 }
 
+#img-large {
+    z-index: 2;
+}
+
 .placeholder img.loaded {
     opacity: 1;
 }
 
-.img-small {
-    filter: blur(50px);
+#img-small {
+    z-index: 1;
+    filter: blur(100px);
     /* this is needed so Safari keeps sharp edges */
     transform: scale(1);
 }
+
+/* form */
+
+@keyframes formShift {
+    0% {
+        transform: translate(100%, 0%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes formShiftBack {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(100%, 0%);
+    }
+}
+
+div#form {
+    display: none;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    background-color: #131715;
+    width: 50vw;
+    height: 100vh;
+    z-index: 4;
+    transform: translate(100%, 0%);
+}
+
+div#formcontent {
+    transform: translate(0%, -50%);
+    width: calc(50vw - 100px);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+form label {
+    color: white;
+    font-size: 18px;
+}
+
+div#formcontent input[type="text"], div#formcontent textarea {
+    width: calc(50vw - 130px);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(0,0,0,0);
+    border: solid 1px;
+    border-color: #3c8a62;
+    padding: 15px;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    outline-width: 0;
+    font-size: 16px;
+    resize: none;
+}
+
+div#formcontent textarea {
+    height: min(250px, calc(100vh - 600px));
+}
+
+::placeholder {
+    color: #3c8a62;
+    opacity: 1; /* Firefox */
+}
+
+@media only screen and (max-width: 1000px) {
+    div#form {
+        width: 100vw;
+    }
+    div#formcontent {
+        width: calc(100vw - 100px);
+    }
+    div#formcontent input[type="text"], div#formcontent textarea {
+        width: calc(100vw - 130px);
+    }
+
+}
+
+div#formcontent p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+div#formcontent p a {
+    color: #CB7109;
+    text-decoration: underline solid 2px #CB7109;
+}
+
+div#formcontent p a:hover {
+    color: white;
+    text-decoration: underline solid 2px white;
+    transition: color 0.2s ease-in, text-decoration 0.2s ease-in;
+}
+
+/* close button */
+
+.close {
+    position: absolute;
+    left: 48px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+.close:hover:before, .close:hover:after {
+    background-color: white;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #3c8a62;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+  
