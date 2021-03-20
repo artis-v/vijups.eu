@@ -311,7 +311,9 @@ div#formcontent p a:hover {
 }
 .close:hover:before, .close:hover:after {
     background-color: white;
+    transition: background-color 0.7s ease-out;
 }
+
 .close:before, .close:after {
     position: absolute;
     left: 15px;
@@ -326,4 +328,33 @@ div#formcontent p a:hover {
 .close:after {
     transform: rotate(-45deg);
 }
-  
+
+/* language selection */
+
+div#languages {
+    position: absolute;
+    top: 32px;
+    right: 38px;
+    z-index: 5;
+    color: #3c8a62;
+    background-color: #131715;
+    font-size: 18px;
+    height: 32px;
+    width: 80px;
+    line-height: 32px;
+    text-align: center;
+}
+
+a.selected {
+    color: white;
+}
+
+a.not {
+    color: #3c8a62;
+    cursor: pointer;
+}
+
+a.not:hover {
+    color: white;
+    transition: color 0.7s ease-out;
+}

@@ -1,7 +1,19 @@
 window.onload = function() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var lang;
+    if(urlParams.has('lang')){
+        lang = urlParams.get('lang');
+    }else{
+        if(navigator.languages.includes('lv')){
+            lang = 'lv';
+        }else{
+            lang = 'en';
+        }
+    }
+    applyTranslations(lang);
     var placeholder = document.querySelector('.placeholder'),
         small = placeholder.querySelector('.img-small')
-
     // 1: load small image and show it
     var img = new Image();
     img.src = small.src;
@@ -80,4 +92,67 @@ function validate() {
     if(valid){
         document.getElementById('contact-form').submit();
     }
+}
+
+var J = JSON.parse(`{
+    "contact": {
+        "en": "Contact me",
+        "lv": "Sazinieties ar mani"
+    },
+    "formIntro1": {
+        "en": "Send an e-mail to ",
+        "lv": "Nosūtiet e-pastu uz "
+    },
+    "formIntro2": {
+        "en": " or fill out the form:",
+        "lv": " vai aizpildiet veidlapu:"
+    },
+    "lbName": {
+        "en": "Name",
+        "lv": "Vārds"
+    },
+    "phName": {
+        "en": "Your name...",
+        "lv": "Jūsu vārds..."
+    },
+    "lbEmail": {
+        "en": "E-mail",
+        "lv": "E-pasts"
+    },
+    "phEmail": {
+        "en": "Your e-mail address...",
+        "lv": "Jūsu e-pasta adrese..."
+    },
+    "lbMessage": {
+        "en": "Message",
+        "lv": "Ziņa"
+    },
+    "phMessage": {
+        "en": "Your message...",
+        "lv": "Jūsu ziņa..."
+    },
+    "send": {
+        "en": "Send",
+        "lv": "Nosūtīt"
+    }
+}`);
+
+function applyTranslations(lang) {
+    if(lang=='en'){
+        document.getElementById('EN').classList = ['selected'];
+        document.getElementById('LV').classList = ['not'];
+    }else{
+        document.getElementById('EN').classList = ['not'];
+        document.getElementById('LV').classList = ['selected'];
+    }
+    document.getElementById('buttonLabel').innerHTML = J['contact'][lang];
+    document.getElementById('formIntro').innerHTML = J['formIntro1'][lang]+`<a href="mailto:artis.vijups@gmail.com">artis.vijups@gmail.com</a>`+J['formIntro2'][lang];
+    document.getElementById('namelabel').innerHTML = J['lbName'][lang];
+    document.getElementById('emaillabel').innerHTML = J['lbEmail'][lang];
+    document.getElementById('messagelabel').innerHTML = J['lbMessage'][lang];
+    document.getElementById('name').placeholder = J['phName'][lang];
+    document.getElementById('email').placeholder = J['phEmail'][lang];
+    document.getElementById('message').placeholder = J['phMessage'][lang];
+    document.getElementById('sendLabel').innerHTML = J['send'][lang];    
+    document.getElementById('thanksPage').value = "https://vijups.eu/thanks?lang="+lang;
 }

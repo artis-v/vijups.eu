@@ -17,6 +17,9 @@
         <div class="placeholder" data-large="vita_vilcina.webp">
             <img src="vita_vilcina_small.webp" class="img-small" id="img-small" alt="Forest in Tīnūži (small)">
         </div>
+        <div id="languages">
+            <p><a id="EN" class="selected" onclick="applyTranslations('en')">EN</a> · <a id="LV" class="not" onclick="applyTranslations('lv')">LV</a></p>
+        </div>
         <div id="content">
             <video autoplay muted disableRemotePlayback>
                 <source src="logo.webm" type="video/webm">
@@ -25,7 +28,7 @@
                 <svg class="icon-arrow before">
                     <use xlink:href="#arrow"></use>
                 </svg>
-                <span class="label">Contact me</span>
+                <span id="buttonLabel" class="label">Contact me</span>
                 <svg class="icon-arrow after">
                     <use xlink:href="#arrow"></use>
                 </svg>
@@ -42,26 +45,26 @@
         <div id="form">
             <a onclick="formDisplay()" class="close"></a>
             <div id="formcontent">
-                <p>Send an e-mail directly to <a href="mailto:artis.vijups@gmail.com">artis.vijups@gmail.com</a> or fill out the form:</p>
+                <p id="formIntro">Send an e-mail to <a href="mailto:artis.vijups@gmail.com">artis.vijups@gmail.com</a> or fill out the form:</p>
                 <form id="contact-form" name="contact-form" action="https://formsubmit.co/artis.vijups@gmail.com" method="POST">
                     <label id="namelabel" for="name">Name</label>
                     <input type="text" id="name" name="name" autocomplete="off" placeholder="Your name...">
                     <label id="emaillabel" for="email">E-mail</label>
                     <input type="text" id="email" name="email" autocomplete="off" placeholder="Your e-mail address...">
                     <label id="messagelabel" for="message">Message</label>
-                    <textarea id="message" name="message" autocomplete="off" placeholder="Write something..."></textarea>
+                    <textarea id="message" name="message" autocomplete="off" placeholder="Your message..."></textarea>
                     <a class="button" id="formButton" onclick="validate()">
                         <svg class="icon-arrow before">
                             <use xlink:href="#arrow"></use>
                         </svg>
-                        <span class="label">Send</span>
+                        <span id="sendLabel" class="label">Send</span>
                         <svg class="icon-arrow after">
                             <use xlink:href="#arrow"></use>
                         </svg>
                     </a>
                     <input type="hidden" name="_autoresponse">
                     <input type="hidden" name="_template" value="box">
-                    <input type="hidden" name="_next" value="https://vijups.eu/thanks.html">
+                    <input id="thanksPage" type="hidden" name="_next" value="https://vijups.eu/thanks">
                 </form>
             </div>
         </div>
