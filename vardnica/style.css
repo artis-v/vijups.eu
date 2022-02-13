@@ -1,6 +1,7 @@
 * {
     font-family: 'Atkinson Hyperlegible', sans-serif;
     scroll-behavior: auto !important;
+    word-wrap: break-word;
 }
 
 html, body {
