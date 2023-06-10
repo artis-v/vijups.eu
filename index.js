@@ -60,13 +60,14 @@ setInterval(addballs, 4000);
 
 function addballs( )
 {
-    if(balls.length<100){
-        balls.push(randomnewball());
-        balls.push(randomnewball());
-        balls.push(randomnewball());
-        balls.push(randomnewball());
-        balls.push(randomnewball());
+    if(balls.length>=100){
+        balls.splice(0, 5);
     }
+    balls.push(randomnewball());
+    balls.push(randomnewball());
+    balls.push(randomnewball());
+    balls.push(randomnewball());
+    balls.push(randomnewball());
 }
 
 function globaldraw() {
