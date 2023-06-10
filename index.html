@@ -12,32 +12,13 @@
         <title>Artis Vijups</title>
         <meta name="description" content="vijups.eu">
         <meta name="author" content="Artis Vijups">
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <!-- Style -->
-        <link rel="stylesheet/less" type="text/css" href="style.less">
-        <!-- Page-specific style -->
-        <link rel="stylesheet/less" type="text/css" href="index.less">
-        <!-- Less -->
-        <script src="https://cdn.jsdelivr.net/npm/less"></script>
-        <!-- Includes -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script> 
-            $(function(){
-              $("#navbar").load("navbar.html");
-            });
+        <!-- Redirect -->
+        <script>
+            if(navigator.languages.includes('lv')){
+                window.location.href = "/lv/";
+            }else{
+                window.location.href = "/en/";
+            }
         </script>
     </head>
-    <body>
-        <div id="navbar"></div>
-        <canvas id="canv"></canvas>
-        <script src="index.js"></script>
-        <div id="construction">
-            <h1>This page is under construction.</h1>
-            <h1 lang="lv">Šī mājaslapa šobrīd tiek veidota.</h1>
-            <h2>Reach out / sazinies: <b><a href="mailto:artis@vijups.eu">artis@vijups.eu</a></b>.</h2>
-        </div>
-    </body>
 </html>

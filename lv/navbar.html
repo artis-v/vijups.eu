@@ -1,0 +1,32 @@
+<script>
+  function bar(){
+    var el = document.getElementById("nav-mobile");
+    if (el.className === "mobile-options closed") {
+      el.className = "mobile-options open";
+    } else {
+      el.className = "mobile-options closed";
+    }
+  }
+</script>
+<div class="bar">
+  <img src="/favicon/android-chrome-192x192.png" alt="Two white circles on a very dark background">
+  <a href="/lv/index.html">Artis Vijups</a>
+  <div id="options">
+    <a href="/lv/index.html">Sākums</a>
+    <a href="/lv/index.html">Skats</a>
+    <a href="/lv/index.html">Dokumenti</a>
+    <a href="/lv/index.html">Par mani</a>
+  </div>
+  <input class="toggle" id="toggle" type="checkbox" onclick="bar()"></input>
+  <label for="toggle" class="hamburger">
+    <div class="top-bun"></div>
+    <div class="meat"></div>
+    <div class="bottom-bun"></div>
+  </label>
+</div>
+<div id="nav-mobile" class="mobile-options closed">
+  <a href="/lv/index.html">Sākums</a>
+  <a href="/lv/index.html">Skats</a>
+  <a href="/lv/index.html">Dokumenti</a>
+  <a href="/lv/index.html">Par mani</a>
+</div>

@@ -142,3 +142,101 @@ body {
     top: 0;
     transform: scale(1);
 }
+
+// FOOTER
+
+#footer {
+    display:flex;
+    flex-wrap:wrap;
+    @media (min-width: 600px) {
+        flex-wrap: nowrap;       
+    }
+    background-color: @secondary;
+    padding: 26px 56px;
+    color: white;
+    a {
+        font-weight: 500;
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        color: @dark;
+        transition: color 0.3s;
+    }
+    #license, #language {
+        display: inline-block;
+        width: fit-content;
+        p {
+            display: inline-block;
+            margin-right: 7px;
+            margin-bottom: 5px;
+        }
+    }
+    #language {
+        @media (min-width: 600px) {
+            padding-left: 20px;
+            text-align: right;
+            align-self: center;
+            margin-left: auto;
+            margin-top: 0;    
+        }
+        margin-top: 15px;    
+        min-width: fit-content;
+    }
+}
+
+.flight-types {
+    display: inline-flex;
+    width: 150px;
+    position: relative;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: relative;
+    z-index: 1;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  .flight-types > input {
+    display: none;
+  }
+  .flight-types > input:checked + label {
+    color: @secondary;
+  }
+  .flight-types > input:nth-of-type(1):checked ~ label:last-of-type:before {
+    transform: translateX(calc(0% + 0px));
+  }
+  .flight-types > input:nth-of-type(2):checked ~ label:last-of-type:before {
+    transform: translateX(calc(100% + 0px));
+  }
+  .flight-types label {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+  .flight-types label:last-of-type:before {
+    content: "";
+    display: block;
+    max-width: calc(50% - 0px);
+    margin: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(0);
+  }
+  .flight-types label {
+    padding: 6px 3px;
+    transition: color 250ms cubic-bezier(0, 0.95, 0.38, 0.98);
+  }
+  .flight-types label:before {
+    background: #fff;
+    transition: all 250ms cubic-bezier(0, 0.95, 0.38, 0.98);
+  }
+  .flight-types label:not(:last-child) {
+    border-right: 1px solid #fff;
+  }
