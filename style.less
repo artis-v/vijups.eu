@@ -1,0 +1,144 @@
+@dark: #102526;
+@secondary: #27a3a9;
+
+* {
+    font-family: 'Commissioner', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: @dark;
+}
+
+// NAVIGATION BAR
+
+#navbar {
+    position: -webkit-sticky; // for Safari
+    position: sticky;
+    top: 0px;
+}
+
+.bar {
+    display: flex;
+    background-color: @dark;
+    align-items: center;
+    padding: 15px 40px;
+    height: 50px;
+    img {
+        margin-right: 14px;
+        width: 35px;
+        height: 35px;
+        border: 1.5px solid white;
+    }
+    a {
+        display: inline-block;
+        color: white;
+        font-size: 19px;
+        margin-bottom: 4px;
+        text-decoration: none;
+    }
+    a:hover {
+        transition: color 0.3s;
+        color: @secondary;
+    }
+    > a {
+        font-size: 22px;
+        font-weight: 500;
+    }
+    div {
+        margin-left: auto;
+        > a {
+            display: none;
+            @media (min-width: 800px) {
+                display: inline-block;
+            }
+            margin-left: 7px;
+            margin-right: 7px;
+        }
+    }
+}
+
+.mobile-options {
+    position: absolute;
+    width: calc(100% - 16px);
+    z-index: 1;
+    height: auto;
+    background-color: fade(@secondary, 85%);
+    padding: 8px;
+    transition: opacity 0.3s, visibility 0.3s;
+    a {
+        margin-left: 40px;
+        display: block;
+        color: white;
+        font-size: 19px;
+        padding: 8px;
+        text-decoration: none;
+    }
+    a:hover {
+        transition: opacity 0.3s;
+        opacity: 50%;
+    }
+}
+
+.mobile-options.open {
+    @media (min-width: 800px) {
+        visibility: hidden;
+        opacity: 0%;
+    }
+    opacity: 100%;
+}
+
+.mobile-options.closed {
+    visibility: hidden;
+    opacity: 0%;
+}
+
+.bar label:hover div {
+    background-color: @secondary;
+}
+
+.hamburger {
+    cursor: pointer;
+    @media (min-width: 800px) {
+        display: none;
+    }
+    width: 2em;
+    height: 30px;
+    z-index: 5;
+    margin-bottom: 5px;
+    div {
+        position: relative;
+        width: 2em;
+        height: 3px;
+        padding: 1px 0px;
+        background-clip: content-box;
+        background-color: white;
+        margin-top: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 15px;
+}
+
+.toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+.toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -5px;
+}
+
+.toggle:checked + .hamburger + .nav {
+    top: 0;
+    transform: scale(1);
+}
