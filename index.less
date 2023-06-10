@@ -1,12 +1,19 @@
 @secondary: #27a3a9;
 
 body {
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 
+canvas {
+    position: relative;
+    z-index: -2;
+}
+
 #construction {
+    z-index: -1;
     position: absolute;
-    top: 150px;
+    top: 90px;
     left: 56px;
     margin-right: 56px;
     @media (min-width: 800px) and (min-height: 550px) {
