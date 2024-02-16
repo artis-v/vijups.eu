@@ -1,13 +1,9 @@
 const canvas = document.getElementById("canv");
 const ctx = canvas.getContext("2d");
 
-window.addEventListener('resize', resizeCanvas, false);
-
-resizeCanvas();
-
 function resizeCanvas() {
     canvas.width = document.documentElement.clientWidth;
-    canvas.height = document.documentElement.clientHeight - 80;
+    canvas.height = document.getElementById("wedge").getBoundingClientRect().height; 
 }
 
 let raf;
@@ -45,7 +41,7 @@ function randomnewball() {
                    randint(-12, 12),
                    randint(-12, 12),
                    radius,
-                   "#27a3a9");
+                   "hsl(221, 50%, 74%)");
 }
 
 let balls = [
@@ -60,18 +56,25 @@ setInterval(addballs, 4000);
 
 function addballs( )
 {
-    if(balls.length>=100){
-        balls.splice(0, 5);
+    if(document.hasFocus()){
+        if(balls.length>=20){
+            balls.splice(0, 5);
+        }
+        balls.push(randomnewball());
+        balls.push(randomnewball());
+        balls.push(randomnewball());
+        balls.push(randomnewball());
+        balls.push(randomnewball());   
     }
-    balls.push(randomnewball());
-    balls.push(randomnewball());
-    balls.push(randomnewball());
-    balls.push(randomnewball());
-    balls.push(randomnewball());
 }
 
-function globaldraw() {
-  ctx.fillStyle = "rgba(16, 37, 38, 1)";
+function globaldraw() {   
+  resizeCanvas(); 
+  const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+  gradient.addColorStop(0, "#102526");
+  gradient.addColorStop(0.5, "#093a3a");
+  gradient.addColorStop(1, "#102526");
+  ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   balls.forEach(ball => {
     ball.draw();

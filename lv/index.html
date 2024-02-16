@@ -1,45 +1,38 @@
 <!doctype html>
 <html lang="lv">
     <head>
+        <!-- Prerequisites -->
         <base href="/">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/favicon/site.webmanifest">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- KaTeX (cannot append due to onload) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+        <!-- Append -->
+        <script> 
+            var content;
+            $.get('header.html', function(data){
+                content=data;
+                $('head').append(content);
+            });
+        </script>
         <!-- Title and metadata -->
         <title>Artis Vijups</title>
         <meta name="description" content="vijups.eu">
         <meta name="author" content="Artis Vijups">
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <!-- Style -->
         <link rel="stylesheet/less" type="text/css" href="style.less">
-        <!-- Page-specific style -->
-        <link rel="stylesheet/less" type="text/css" href="index.less">
-        <!-- Less -->
         <script src="https://cdn.jsdelivr.net/npm/less"></script>
-        <!-- Includes -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script> 
-            $(function(){
-              $("#navbar").load("/lv/navbar.html");
-              $("#footer").load("/lv/footer.html");
-            });
-        </script>
     </head>
     <body>
         <div id="navbar"></div>
-        <canvas id="canv"></canvas>
-        <script src="index.js"></script>
-        <div id="construction">
-            <h1>Šī mājaslapa šobrīd tiek veidota.</h1>
-            <h2>Sazinies: <b><a href="mailto:artis@vijups.eu">artis@vijups.eu</a></b>.</h2>
+        <div id="wedge" style="height: calc(100vh - 172px); flex-direction: column;">
+            <canvas id="canv"></canvas>
+            <h1 style="max-width: 100%;">Šī mājaslapa šobrīd tiek veidota.</h1>
+            <div class="line-break"></div>
+            <h2 style="text-align: center;">Sazinies: <b><a href="mailto:artis@vijups.eu">artis@vijups.eu</a></b>.</h2>
         </div>
+        <script src="index.js"></script>
         <div id="footer"></div>
     </body>
 </html>
