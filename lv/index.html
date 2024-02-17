@@ -26,12 +26,15 @@
     </head>
     <body>
         <div id="navbar"></div>
-        <div id="wedge" style="height: calc(100dvh - 172px); flex-direction: column;">
+        <div id="wedge" style="flex-direction: column;">
             <canvas id="canv"></canvas>
             <h1 style="max-width: 100%;">Šī mājaslapa šobrīd tiek veidota.</h1>
             <div class="line-break"></div>
             <h2 style="text-align: center;">Sazinies: <b><a href="mailto:artis@vijups.eu">artis@vijups.eu</a></b>.</h2>
         </div>
+        <script>
+            document.getElementById("wedge").style.height = (window.innerHeight - 172)+"px"; 
+        </script>
         <script src="index.js" data-hue="r" id="balls"></script>
         <div id="footer"></div>
     </body>
