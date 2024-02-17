@@ -33,9 +33,7 @@
             <h2 style="text-align: center;">Sazinies: <b><a href="mailto:artis@vijups.eu">artis@vijups.eu</a></b>.</h2>
         </div>
         <script>
-            window.onload = (event) => {
-                document.getElementById("wedge").style.height = (window.innerHeight - 172)+"px"; 
-            };
+            document.getElementById("wedge").style.height = ($(window).height() - 172)+"px";
         </script>
         <script src="index.js" data-hue="r" id="balls"></script>
         <div id="footer"></div>
