@@ -1,5 +1,7 @@
 const canvas = document.getElementById("canv");
 const ctx = canvas.getContext("2d");
+var h = document.getElementById("balls").getAttribute("data-hue");
+if(h=='r') h = Math.random()*360;
 
 function resizeCanvas() {
     canvas.width = document.documentElement.clientWidth;
@@ -34,14 +36,14 @@ function randint(min, max) { // min and max included
 }
 
 function randomnewball() {
-    let radius = randint(50, Math.max(60, Math.min(canvas.width,canvas.height)/6));
+    let radius = randint(Math.min(50, Math.min(canvas.width,canvas.height)/8), Math.max(50, Math.min(canvas.width,canvas.height)/6));
     let margin = radius+10;
     return newball(randint(margin, canvas.width-margin),
                    randint(margin, canvas.height-margin),
                    randint(-12, 12),
                    randint(-12, 12),
                    radius,
-                   "hsl(221, 50%, 74%)");
+                   "hsl("+h+", 50%, 60%)");
 }
 
 let balls = [
@@ -99,3 +101,6 @@ function globaldraw() {
 
 balls.forEach(ball => ball.draw());
 raf = window.requestAnimationFrame(globaldraw);
+window.onload = (event) => {
+    window.less.modifyVars({'@special':"hsl("+h+", 50%, 60%)"})
+};
