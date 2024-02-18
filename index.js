@@ -232,7 +232,7 @@ function dgradSet(){
     dgrad.addColorStop(0, 16, 37, 38);
     dgrad.addColorStop(0.5, 9, 58, 58);
     dgrad.addColorStop(1, 16, 37, 38);
-    imageData = dgrad.fillRect(ctx, 0, 0, canvas.width, canvas.height);
+    imageData = dgrad.fillRect(ctx, 0, 0, Math.max(canvas.width,1), Math.max(canvas.height,1));
 }
 
 function resizeCanvas() {
