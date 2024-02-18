@@ -226,6 +226,7 @@ End of Dan Gries code
 */
 
 var dgrad, imageData;
+var buffer = document.createElement('canvas');
 
 function dgradSet(){
     dgrad = new DitheredRadialGradient(canvas.width/2, 0, 0, canvas.width/2, 0, Math.sqrt(canvas.width*canvas.width/4+canvas.height*canvas.height));		
@@ -233,6 +234,9 @@ function dgradSet(){
     dgrad.addColorStop(0.5, 9, 58, 58);
     dgrad.addColorStop(1, 16, 37, 38);
     imageData = dgrad.fillRect(ctx, 0, 0, Math.max(canvas.width,1), Math.max(canvas.height,1));
+    buffer.width = canvas.width;
+    buffer.height = canvas.height;
+    buffer.getContext('2d').putImageData(...imageData)
 }
 
 function resizeCanvas() {
@@ -310,7 +314,7 @@ function addballs(){
 
 function globaldraw(){   
   resizeCanvas();
-  ctx.putImageData(...imageData);
+  ctx.drawImage(buffer, 0, 0);
   balls.forEach(ball => {
     ball.draw();
     ball.x += ball.vx;
