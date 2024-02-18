@@ -54,12 +54,12 @@ let balls = [
     randomnewball()
 ];
 
-setInterval(addballs, 4000);
+setInterval(addballs, 3000);
 
 function addballs( )
 {
     if(document.hasFocus()){
-        if(balls.length>=20){
+        if(balls.length>=25){
             balls.splice(0, 5);
         }
         balls.push(randomnewball());

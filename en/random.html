@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Prerequisites -->
+        <base href="/">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- KaTeX (cannot append due to onload) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+        <!-- Markdown -->
+        <link rel="stylesheet" href="/highlight/styles/base16/snazzy.min.css"/>
+        <script src="/highlight/highlight.min.js"></script>
+        <!-- Append -->
+        <script> 
+            var content;
+            $.get('header.html', function(data){
+                content=data;
+                $('head').append(content);
+            });
+        </script>
+        <!-- Title and metadata -->
+        <title>Artis Vijups</title>
+        <meta name="description" content="vijups.eu">
+        <meta name="author" content="Artis Vijups">
+        <!-- Style -->
+        <link rel="stylesheet/less" type="text/css" href="style.less">
+        <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="wedge">
+            <canvas id="canv"></canvas>
+            <h1>Random things I've compiled, written or created</h1>
+            <div class="line-break"></div>
+            <div class="lip"></div>
+            <div class="line-break"></div>
+            <p>Updated on 18 February 2024</p>
+        </div>
+        <div id="article">
+            <h2>Lund problemsets</h2>
+                <p>For some of the courses which I took at Lund University, I found it useful to create and solve a problemset of about 20 to 30 relevant problems before each written exam.
+                </p><p>
+                    I never kept a record of where the problems are actually from. I believe they're all either made by me, or taken from the course textbooks or from <a href="https://tutorial.math.lamar.edu/">Paul Dawkins's Online Notes</a>.
+                </p><p>
+                    If you'd like access to the problemsets and solutions, be sure to <a href="/en/contact.html">contact me</a> and I'll be happy to share my documents.
+                </p>
+                <p>The courses for which I have problemsets are:</p>
+                <ul>
+                    <li>MATA22 Linear Algebra 1,</li>
+                    <li>MATB21 Analysis in Several Variables 1,</li>
+                    <li>MATB22 Linear Algebra 2,</li>
+                    <li>MATB23 Analysis in Several Variables 2.</li>
+                </ul>
+            <h2>Scientific research work (in Latvian)</h2>
+            <p>
+                In Form 11, I wrote a scientific paper titled "Non-standard solutions to problems of the Latvian Open Mathematical Olympiad". You can read it <a href="zpd.pdf">here</a>.</p>
+            <h2>Dictionary of terms from Biology II (in Latvian)</h2>
+            <p>
+                In 2022, my biology teacher kindly asked to combine the work of many students, who had written definitions and found relevant images for various terms from the Biology II subject, into one webpage. You can check out the result <a href="vardnica">here</a>.
+            </p>
+            <h2>Programming olympiad preparation (in Latvian)</h2>
+            <p>
+                In 2023, a student from Salaspils qualified for the Latvian Olympiad in Informatics. The process of helping him prepare for the contest turned into a very long PDF discussing some of the useful concepts, which you can read <a href="materials.pdf">here</a>.
+            </p>
+            <p>
+                Later that year, some Swedish students asked what problems I felt were useful when learning to do contests. This spawned a list of useful problems, which you can see <a href="saraksts.pdf">here</a>.
+            </p>
+        </div>
+        <script src="index.js" data-hue="85" id="balls"></script>
+        <div id="footer"></div>
+    </body>
+</html>
