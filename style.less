@@ -1,6 +1,6 @@
 @dark: #102526;
-@wedgeborder: #093a3a;
-@special: #093a3a;
+@wedgeborder: #0c4c4c;
+@special: #0c4c4c;
 
 @font-face{
     font-family: 'Caudex';
@@ -94,7 +94,7 @@ body {
     position: -webkit-sticky; // for Safari
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .bar {
@@ -409,6 +409,18 @@ div#wedge {
     justify-content: center;
     flex-wrap: wrap;
     color: white;
+    background-color: @dark;
+    background-image: url('gradline.webp');
+    background-size: 100% 1px;
+    background-repeat: repeat-y;
+
+    canvas {
+        z-index: 1 !important;
+    }
+
+    * {
+        z-index: 2;
+    }
 
     .line-break {
         width: 100%;

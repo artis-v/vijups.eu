@@ -72,11 +72,7 @@ function addballs( )
 
 function globaldraw() {   
   resizeCanvas(); 
-  const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  gradient.addColorStop(0, "#102526");
-  gradient.addColorStop(0.5, "#093a3a");
-  gradient.addColorStop(1, "#102526");
-  ctx.fillStyle = gradient;
+  ctx.fillStyle = "rgba(0,0,0,0)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   balls.forEach(ball => {
     ball.draw();
