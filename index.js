@@ -102,7 +102,12 @@ function globaldraw() {
 
 balls.forEach(ball => ball.draw());
 raf = window.requestAnimationFrame(globaldraw);
-window.onload = (event) => {
+
+function modify(){
     window.less.modifyVars({'@special':"hsl("+h+", 50%, 60%)"})
-    setTimeout(window.less.modifyVars({'@special':"hsl("+h+", 50%, 60%)"}), 500);
+}
+
+window.onload = (event) => {
+    modify()
+    setTimeout(modify, 500);
 };
