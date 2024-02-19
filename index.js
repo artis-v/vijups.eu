@@ -2,6 +2,11 @@ const canvas = document.getElementById("canv");
 const ctx = canvas.getContext("2d");
 var h = document.getElementById("balls").getAttribute("data-hue");
 if(h=='r') h = Math.random()*360;
+var alter = false
+if(h=='e') {
+    alter = 45
+    h = 215
+}
 
 function resizeCanvas() {
     canvas.width = document.documentElement.clientWidth;
@@ -43,7 +48,7 @@ function randomnewball() {
                    randint(-12, 12),
                    randint(-12, 12),
                    radius,
-                   "hsl("+h+", 50%, 60%)");
+                   (alter ? "hsl("+(Math.random() > 0.5 ? alter : h)+", 50%, 60%)" : "hsl("+h+", 50%, 60%)"));
 }
 
 let balls = [

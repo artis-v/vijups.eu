@@ -86,7 +86,7 @@ body {
     #first {
         font-family: 'Caudex';
         color: @special;
-        font-size: 24pt;
+        font-size: 30px;
         line-height: 0px;
     }
     a {
@@ -108,6 +108,29 @@ body {
     @media screen and (max-width: 540px) {
         img {
             width: calc(100vw - 40px);
+        }
+    }
+    table {
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid white;
+        table-layout: fixed;
+        color: white;
+        border-collapse: collapse;
+    }
+    td {
+        padding: 7px;
+        margin: 0;
+        border-bottom: 1px solid white;
+    }
+    @media screen and (max-width: 540px) {
+        .wid {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 541px) {
+        .nar {
+            display: none;
         }
     }
 }
