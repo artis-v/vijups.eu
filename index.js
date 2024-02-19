@@ -104,4 +104,5 @@ balls.forEach(ball => ball.draw());
 raf = window.requestAnimationFrame(globaldraw);
 window.onload = (event) => {
     window.less.modifyVars({'@special':"hsl("+h+", 50%, 60%)"})
+    setTimeout(window.less.modifyVars({'@special':"hsl("+h+", 50%, 60%)"}), 500);
 };
