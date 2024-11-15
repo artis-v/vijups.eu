@@ -33,24 +33,28 @@ body {
     grid-template-columns: 700px auto;
     grid-gap: 1rem;
     justify-content: center;
-}
-
-#article {
-    grid-column: 1;
-}
-
-#side {
-    grid-column: 2;
+    > #article {
+        grid-column: 1;
+    }
+    > #side {
+        grid-column: 2;
+    }
 }
 
 @media (max-width: 1049px) {
     #container {
-        grid-template-columns: 700px;
+        grid-template-columns: min(100%, 700px);
         grid-template-rows: auto auto;
+        > #side {
+            grid-column: 1;
+        }
     }
+}
 
-    #side {
-        grid-column: 1;
+#article:not(#container #article){
+    @media (min-width: 740px) {
+        margin: 0 auto;
+        width: 700px;
     }
 }
 
