@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="lv">
+    <head>
+        <!-- Prerequisites -->
+        <base href="/">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- KaTeX (cannot append due to onload) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+        <!-- Markdown -->
+        <link rel="stylesheet" href="/highlight/styles/base16/snazzy.min.css"/>
+        <script src="/highlight/highlight.min.js"></script>
+        <!-- Append -->
+        <script> 
+            var content;
+            $.get('header.html', function(data){
+                content=data;
+                $('head').append(content);
+            });
+        </script>
+        <!-- Title and metadata -->
+        <title>Artis Vijups</title>
+        <meta name="description" content="vijups.eu">
+        <meta name="author" content="Artis Vijups">
+        <meta name="keywords" content="Senlagē, Donts, Sainte-Lague, D'Hondt, Eiropas parlaments, vēlēšanas, mandāti" />
+        <!-- Style -->
+        <link rel="stylesheet/less" type="text/css" href="style.less">
+        <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="wedge">
+            <canvas id="canv"></canvas>
+            <h1>Cik mandātus saņems katra partija?</h1>
+            <div class="line-break"></div>
+            <div class="lip"></div>
+            <div class="line-break"></div>
+            <p>Publicēts 2024. gada 19. februārī</p>
+        </div>
+        <div id="article">
+        <p>
+            <strong id="first">L</strong>atvijā pamazām tuvojas Eiropas parlamenta vēlēšanas. Līderi ir izlemti, <a href="https://epv2024.cvk.lv/kandidatu-saraksti">saraksti ir iesniegti</a>, un nu jau arī <a href="https://www.lsm.lv/raksts/zinas/latvija/18.02.2024-partiju-reitingi-pirms-eiroparlamenta-velesanam-lideros-jauna-vienotiba-un-nacionala-apvieniba.a543401/">pirmie aptauju skaitļi ir iegūti</a>.
+        </p>
+        <p>
+            Vēlēšanu dienā, vēlētāji atdod savas balsis politiskajiem spēkiem. Mēs noskaidrojam to, cik balsis katrs saraksts saņēmis. Un tad, parasti nākamajā rītā, medijos mums pastāsta, pie cik mandātiem katra partija tiks.
+        </p>
+        <p>
+            Taču ļoti reti mēs aizdomājamies par šo palēcienu no simtiem tūkstošu balsu uz izredzēto deputātu kopu. Kā tieši tiek izlemts, cik mandāti tiek katram politiskajam spēkam?
+        </p>
+        <p>
+            Jautājums, kas ir "godīgs" sadalījums, ir diezgan subjektīvs. Mēs aplūkosim divas pieejas, un beigās noskaidrosim, ko tieši dara Latvijā.
+        </p>
+        <h2>Padomes vēlēšanas</h2>
+        <p>
+            Lūk, piemērs. Ir notikušas padomes vēlēšanas, un vēlētāji ir nobalsojuši šādi:
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <td width="70px" style="background-color: hsl(215, 50%, 60%)">Zilā partija</td>
+                    <td width="70px" style="background-color: hsl(45, 50%, 60%)">Dzeltenā partija</td>
+                    <td width="70px" style="background-color: hsl(0, 0%, 60%)">Pelēkā partija</td>
+                </tr>
+                <tr>
+                    <td style="background-color: hsl(215, 50%, 60%)">47%</td>
+                    <td style="background-color: hsl(45, 50%, 60%)">29%</td>
+                    <td style="background-color: hsl(0, 0%, 60%)">24%</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Ja padomē jābūt pieciem deputātiem, cik deputātiem vajadzētu būt no katras partijas?
+        </p>
+        <h2>Mandātu-balsu attiecība</h2>
+        <p>
+            Ja pasaule būtu perfekta, tad mēs izdarītu tā, lai procenti iegūto balsu un procenti iegūto mandātu būtu vienādi.
+        </p>
+        <p class="wid">
+            Bet pasaule nav perfekta, un panākt, ka vienmēr $$\text{\% partijas balsu = \% partijas mandātu}$$ šajā gadījumā nav iespējams.
+        </p>
+        <p class="nar">
+            Bet pasaule nav perfekta, un panākt, ka vienmēr $$\text{\% partijas balsu}\\ \text{= \% partijas mandātu}$$ šajā gadījumā nav iespējams.
+        </p>
+        <p>
+            Taču šis vienādojums nav bezjēdzīgs. Ja mēs to pārrakstām šādi: $$\frac{\text{\% partijas mandātu}}{\text{\% partijas balsu}}=1\hspace{-2px},$$
+        </p>
+        <p>
+            tad mēs iegūstam taustāmu mērķi. Ja mēs nevaram panākt, ka vienādojums izpildās un kreisajā pusē esošā daļa tiešām ir vienāda ar \(1\), tad mēs varam mēģināt panākt, lai šī daļa ir iespējami tuvu skaitlim \(1\).
+        </p>
+        <p>
+            Šai daļai tāpēc ir piešķirts īpašs nosaukums: mandātu-balsu attiecība.
+        </p>
+        <h2>Divas idejas</h2>
+        <p>
+            Paskatoties uz balsīm, mums šķiet, ka divi mandātu sadalījumi varētu būt godīgi:
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <td width="55px">Partija</td>
+                    <td width="80px" style="background-color: hsl(215, 50%, 60%)">Zilā</td>
+                    <td width="80px" style="background-color: hsl(45, 50%, 60%)">Dzeltenā</td>
+                    <td width="80px" style="background-color: hsl(0, 0%, 60%)">Pelēkā</td>
+                </tr>
+                <tr>
+                    <td>Balsis</td>
+                    <td style="background-color: hsl(215, 50%, 60%)">47%</td>
+                    <td style="background-color: hsl(45, 50%, 60%)">29%</td>
+                    <td style="background-color: hsl(0, 0%, 60%)">24%</td>
+                </tr>
+                <tr>
+                    <td>Ideja A</td>
+                    <td style="background-color: hsl(215, 50%, 60%)">3</td>
+                    <td style="background-color: hsl(45, 50%, 60%)">1</td>
+                    <td style="background-color: hsl(0, 0%, 60%)">1</td>
+                </tr>
+                <tr>
+                    <td>Ideja B</td>
+                    <td style="background-color: hsl(215, 50%, 60%)">2</td>
+                    <td style="background-color: hsl(45, 50%, 60%)">2</td>
+                    <td style="background-color: hsl(0, 0%, 60%)">1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Mēs varam izrēķināt visas trīs mandātu-balsu attiecības katrā no abiem gadījumiem.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <td width="55px">Partija</td>
+                    <td width="80px" style="background-color: hsl(215, 50%, 60%)">Zilā</td>
+                    <td width="80px" style="background-color: hsl(45, 50%, 60%)">Dzeltenā</td>
+                    <td width="80px" style="background-color: hsl(0, 0%, 60%)">Pelēkā</td>
+                </tr>
+                <tr>
+                    <td>Balsis</td>
+                    <td style="background-color: hsl(215, 50%, 60%)">47%</td>
+                    <td style="background-color: hsl(45, 50%, 60%)">29%</td>
+                    <td style="background-color: hsl(0, 0%, 60%)">24%</td>
+                </tr>
+                <tr>
+                    <td>Ideja A</td>
+                    <td style="background-color: hsl(215, 50%, 60%)">\(\frac{60\%}{47\%}=1.28\)</td>
+                    <td style="background-color: hsl(45, 50%, 60%)">\(\frac{20\%}{29\%}=0.69\)</td>
+                    <td style="background-color: hsl(0, 0%, 60%)">\(\frac{20\%}{24\%}=0.83\)</td>
+                </tr>
+                <tr>
+                    <td>Ideja B</td>
+                    <td style="background-color: hsl(215, 50%, 60%)">\(\frac{40\%}{47\%}=0.85\)</td>
+                    <td style="background-color: hsl(45, 50%, 60%)">\(\frac{40\%}{29\%}=1.38\)</td>
+                    <td style="background-color: hsl(0, 0%, 60%)">\(\frac{20\%}{24\%}=0.83\)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Beļģu jurists Viktors Donts aplūko šo tabulu un saka: "Atradīsim to vienu attiecību, kas ir vistālāk no \(1\), un izvēlēsimies pretējo ideju."
+        </p>
+        <p>
+            Bet franču matemātiķis Andrē Senlagē aplūko šo tabulu un saka: "Aplūkosim punktus \(A=(1.28,0.69,0.83)\) un \(B=(0.85,1.38,0.83)\), un izvēlēsimies to ideju, kuras punkts ir tuvāk \((1,1,1)\)."
+        </p>
+        <p>
+            Abi divi varianti ir diezgan godīgi veidi, kā spriest, kad mēs esam tikuši tuvāk mūsu mērķim \(1\).
+        </p>
+        <p>
+            Sliktā ziņa ir, ka Donts izvēlās ideju A, jo \(1.38\) ir vistālāk no \(1\), bet Senlagē <a href="https://www.wolframalpha.com/input?i=a%3DEuclideanDistance%5B%281.28%2C0.69%2C0.83%29%2C%281%2C1%2C1%29%5D%2C+b%3DEuclideanDistance%5B%280.85%2C1.38%2C0.83%29%2C%281%2C1%2C1%29%5D">izvēlās ideju B.</a> Mums nāksies izšķirties par labu vienam no viņiem.
+        </p>
+        <h2>Galvenā atšķirība, un ko dara Latvija</h2>
+        <p>
+            Iespējams, jūs pamanījāt, ka Donta kritērijs piešķīra Zilajai partijai vairākumu padomē, lai gan tā nesaņēma vairākumu balsu.
+        </p>
+        <p>
+            Lai gan šajā gadījumā tā drīzāk ir sakritība, kopumā pasaules prakse liecina, ka patiešām Donta kritērijs ir labvēlīgāks lielākajām partijām un koalīcijām. Šo efektu pamatā raisa taktiska balsošana.
+        </p>
+        <p>
+            Pretstatā, Senlagē kritērijs veido risku, ka mazākas partijas spēs vieglāk tikt pie labākiem rezultātiem, kas izraisa ļoti sadrumstalotu sadalījumu.
+        </p>
+        <p>
+            Latvijā tiek izmantots Senlagē kritērijs, bet šis aspekts tiek atsvērts ar "\(5\%\) barjeru", kas partijām obligāti jāpārvar, lai varētu tikt pie mandātiem.
+        </p>
+        <p>
+            Šis ir līdzsvarots risinājums, bet neizbēgami tas ir pavisam subjektīvs. Piemēram, Indonēzijā izmanto šādu pašu sistēmu, bet ar \(4\%\) barjeru. Horvātijā ir \(5\%\) barjera, bet viņi izmanto Donta kritēriju. Norvēģijā izmanto pielāgotu Senlagē ideju, lai ierēķinātu arī valsts ģeogrāfiju, un ir iespējami vēl daudz dažādi citi varianti, kur varbūt pat šos abus kritērijus nelieto vispār.
+        </p>
+        <h2>Kā atrast atbilstošo sadalījumu?</h2>
+        <p>
+            Iepriekš, mēs aplūkojām divus sadalījumus un izlēmām, kuru atmest. Bet īstās vēlēšanās ir ļoti daudz partiju un ļoti daudz dažādu iespēju, kāds varētu būt sadalījums.
+        </p>
+        <p>
+            Mēs nevēlamies aprēķināt virkni attālumu starp daudzdimensionāliem punktiem. Par laimi, pats Senlagē <a href="http://www.numdam.org/item/10.24033/asens.627.pdf">pierādīja</a>, ka sekojošā metode iegūst derīgu rezultātu:
+        </p>
+            <ul>
+                <li>katrai partijai, kas pārvarējusi barjeru, sākumā ir balsu skaits un dalītājs \(1\),</li>
+                <li>katrai partijai aprēķina vērtību, balsu skaitu dalot ar dalītāju,</li>
+                <li>partijai ar lielāko vērtību piešķir vienu mandātu un dalītāju palielina par \(2\),</li>
+                <li>procesu atkārto, līdz izdalīti visi mandāti.</li>
+            </ul>
+        <p>
+            Šī efektīvi ir tā metode, kas aprakstīta <a href="https://likumi.lv/ta/id/84185#p44">vēlēšanu likumā</a>, taču tur vispirms tiek izrēķinātas vērtības ar visiem iespējamajiem dalītājiem \(1,3,5,7,\ldots\) atkarībā no vakanču skaita, un tad tikai tiek sadalīti mandāti.
+        </p>
+        <p>
+            Matemātiku, pateicoties kurai šis tiešām darbojas, iespējams aprakstīšu citreiz.
+        </p>
+        <h2>Prognoze</h2>
+        <p>
+            Tagad, kad mēs zinām principu, mēs varam, balstoties uz pēdējās SKDS aptaujas rezultātiem, noteikt EP deputātu skaitu no katras partijas:
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Partija</td>
+                    <td width="40px">\(\div1\)</td>
+                    <td width="40px">\(\div3\)</td>
+                    <td width="40px">\(\div5\)</td>
+                    <td width="55px">Mandāti</td>
+                </tr>
+                <tr>
+                    <td style="background-color: hsl(100, 50%, 60%)">JV</td>
+                    <td style="background-color: hsl(100, 50%, 60%)">\(17.9\%\)</td>
+                    <td style="background-color: hsl(100, 50%, 60%)">\(6.0\%\)</td>
+                    <td>\(3.6\%\)</td>
+                    <td>\(2\)</td>
+                </tr>
+                <tr>
+                    <td style="background-color: hsl(335, 50%, 60%)">NA</td>
+                    <td style="background-color: hsl(335, 50%, 60%)">\(16.5\%\)</td>
+                    <td>\(5.5\%\)</td>
+                    <td></td>
+                    <td>\(1\)</td>
+                </tr>
+                <tr>
+                    <td style="background-color: hsl(335, 0%, 60%)">LA</td>
+                    <td style="background-color: hsl(335, 0%, 60%)">\(9.2\%\)</td>
+                    <td>\(3.1\%\)</td>
+                    <td></td>
+                    <td>\(1\)</td>
+                </tr>
+                <tr>
+                    <td style="background-color: hsl(352, 50%, 60%)">SAS</td>
+                    <td style="background-color: hsl(352, 50%, 60%)">\(9.1\%\)</td>
+                    <td>\(3.0\%\)</td>
+                    <td></td>
+                    <td>\(1\)</td>
+                </tr>
+                <tr>
+                    <td style="background-color: hsl(11, 50%, 60%)">PRO</td>
+                    <td style="background-color: hsl(11, 50%, 60%)">\(8.9\%\)</td>
+                    <td>\(3.0\%\)</td>
+                    <td></td>
+                    <td>\(1\)</td>
+                </tr>
+                <tr>
+                    <td style="background-color: hsl(27, 50%, 60%)">STA</td>
+                    <td style="background-color: hsl(27, 50%, 60%)">\(7.5\%\)</td>
+                    <td>\(2.5\%\)</td>
+                    <td></td>
+                    <td>\(1\)</td>
+                </tr>
+                <tr>
+                    <td style="background-color: hsl(39, 50%, 60%)">AS</td>
+                    <td style="background-color: hsl(39, 50%, 60%)">\(7.4\%\)</td>
+                    <td>\(2.5\%\)</td>
+                    <td></td>
+                    <td>\(1\)</td>
+                </tr>
+                <tr>
+                    <td style="background-color: hsl(324, 50%, 60%)">LPV</td>
+                    <td style="background-color: hsl(324, 50%, 60%)">\(6.6\%\)</td>
+                    <td>\(2.2\%\)</td>
+                    <td></td>
+                    <td>\(1\)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Uz šīs tabulas pamata var saprast komentārus, ka dabūt trīs mandātus šajās vēlēšanās būs sarežģīti. Problēma ir tāda, ka šoreiz kādas astoņas partijas varētu pārvarēt \(5\%\) barjeru. 
+        </p>
+        <p>
+            Pie šī scenārija, pirmajai vietai vajag vismaz \(25\%\) balsu, lai konkurētu par trešo mandātu, bet neviens politiskais spēks aptaujā nav tuvu šādam rezultātam.
+        </p>
+        <p>
+            Attiecīgi, vai nu kādam politiskajam spēkam būtu vajadzīgs straujš atbalsta pieaugums, vai arī vairākiem sarakstiem būtu jānoslīd zem piecu procentu barjeras.
+        </p>
+        </div>
+        <script src="index.js" data-hue="e" id="balls"></script>
+        <div id="footer"></div>
+    </body>
+</html>

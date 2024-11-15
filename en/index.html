@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Prerequisites -->
+        <base href="/">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- KaTeX (cannot append due to onload) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+        <!-- Append -->
+        <script> 
+            var content;
+            $.get('header.html', function(data){
+                content=data;
+                $('head').append(content);
+            });
+        </script>
+        <!-- Title and metadata -->
+        <title>Artis Vijups</title>
+        <meta name="description" content="vijups.eu">
+        <meta name="author" content="Artis Vijups">
+        <!-- Style -->
+        <link rel="stylesheet/less" type="text/css" href="style.less">
+        <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="wedge" style="height: calc(100svh - 172px); flex-direction: column;">
+            <canvas id="canv"></canvas>
+            <h1 style="max-width: 100%;">This page is under construction.</h1>
+            <div class="line-break"></div>
+            <h2 style="text-align: center; font-family: 'Commissioner' !important; font-weight: 500; color: white;">Get in touch: <b><a href="mailto:artis@vijups.eu">artis@vijups.eu</a></b>.</h2>
+        </div>
+        <script src="index.js" data-hue="r" id="balls"></script>
+        <div id="footer"></div>
+    </body>
+</html>
+

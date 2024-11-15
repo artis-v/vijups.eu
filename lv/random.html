@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="lv">
+    <head>
+        <!-- Prerequisites -->
+        <base href="/">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- KaTeX (cannot append due to onload) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+        <!-- Markdown -->
+        <link rel="stylesheet" href="/highlight/styles/base16/snazzy.min.css"/>
+        <script src="/highlight/highlight.min.js"></script>
+        <!-- Append -->
+        <script> 
+            var content;
+            $.get('header.html', function(data){
+                content=data;
+                $('head').append(content);
+            });
+        </script>
+        <!-- Title and metadata -->
+        <title>Artis Vijups</title>
+        <meta name="description" content="vijups.eu">
+        <meta name="author" content="Artis Vijups">
+        <!-- Style -->
+        <link rel="stylesheet/less" type="text/css" href="style.less">
+        <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="wedge">
+            <canvas id="canv"></canvas>
+            <h1>Nejaušas lietas, ko esmu apkopojis, uzrakstījis vai izveidojis</h1>
+            <div class="line-break"></div>
+            <div class="lip"></div>
+            <div class="line-break"></div>
+            <p>Atjaunināts 2024. gada 19. februārī</p>
+        </div>
+        <div id="article">
+            <h2>Zinātniskās pētniecības darbs</h2>
+            <p>
+                11. klasē es uzrakstīju ZPD ar nosaukumu "Latvijas atklātās matemātikas olimpiādes uzdevumu nestandarta atrisinājumi". Šo darbu var aplūkot <a href="zpd.pdf">šeit</a>.</p>
+            <h2>Terminu vārdnīca priekšmetam Bioloģija II</h2>
+            <p>
+                2022. gadā mana bioloģijas skolotāja laipni palūdza apvienot dažādu skolēnu darbus, kuros viņi uzrakstīja definīcijas un sameklēja saistītus attēlus dažādiem terminiem no priekšmeta Bioloģija II, vienā mājaslapā. Rezultātu var aplūkot <a href="vardnica">šeit</a>.
+            </p>
+            <h2>Gatavošanās programmēšanas sacensībām</h2>
+            <p>
+                2023. gadā, skolēns no Salaspils kvalificējās Latvijas informātikas olimpiādei. Gatavošanās process pārvērtās lielā PDF dokumentā, kas apraksta dažādus vērtīgus paņēmienus sacensību programmēšanā. To ir iespējams izlasīt <a href="materials.pdf">šeit</a>.
+            </p>
+            <p>
+                Vēlāk tajā pašā gadā, daži zviedru skolēni man vaicāja, kādi uzdevumi varētu būt noderīgi, mācoties priekš dalības konkursos. Rezultātā tapa vērtīgu uzdevumu saraksts, ko var skatīt <a href="saraksts.pdf">šeit</a>.
+            </p>
+            <h2>Lundas uzdevumu komplekti (angliski)</h2>
+                <p>Dažos no kursiem, kurus es mācījos Lundas universitātē, man šķita noderīgi izveidot un atrisināt uzdevumu komplektu ar apmēram 20 līdz 30 saistītiem uzdevumiem pirms attiecīgā rakstiskā eksāmena.
+                </p><p>
+                    Es nekad neuzglabāju īstos avotus šiem uzdevumiem. Man šķiet, ka visiem uzdevumiem vai nu autors esmu es, vai arī tie ir paņemti no kursa grāmatas vai <a href="https://tutorial.math.lamar.edu/">Pola Dokinsa tiešsaistes piezīmēm</a>.
+                </p><p>
+                    Ja jūs vēlētos piekļuvi šiem komplektiem un uzdevumu atrisinājumiem, aicinu <a href="/lv/contact.html">sazināties ar mani</a>. Es labprāt dalīšos ar šiem maniem dokumentiem.
+                </p>
+                <p>Kursu, kuriem pastāv šādi uzdevumu komplekti, nosaukumi angliski ir:</p>
+                <ul>
+                    <li>MATA22 Linear Algebra 1,</li>
+                    <li>MATB21 Analysis in Several Variables 1,</li>
+                    <li>MATB22 Linear Algebra 2,</li>
+                    <li>MATB23 Analysis in Several Variables 2.</li>
+                </ul>
+        </div>
+        <script src="index.js" data-hue="85" id="balls"></script>
+        <div id="footer"></div>
+    </body>
+</html>

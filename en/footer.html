@@ -1,0 +1,28 @@
+<script>
+    function swap(){
+        window.location.href = location.pathname.replace("/en/", "/lv/");
+    }
+</script>
+<span id="license">
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0; width:129px; height:30px;" src="license.png" /></a>
+<br />
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The material on vijups.eu</span> by
+<a xmlns:cc="http://creativecommons.org/ns#" href="/en/index.html" property="cc:attributionName" rel="cc:attributionURL">Artis Vijups</a>
+is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+</span>
+<span id="language">
+    <p>Language:</p>
+    <div class="flight-types">
+        <input autocomplete="off" type="radio" name="flight-type" value="lv" id="lv" onclick="swap()"/>
+        <label for="lv">
+            <p>Latviešu</p>
+        </label>
+    
+        <input autocomplete="off" type="radio" name="flight-type" value="en" id="en" checked />
+        <label for="en">
+            <p>English</p>
+        </label>
+    </div>
+</div>
