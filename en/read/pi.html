@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Prerequisites -->
+        <base href="/">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- KaTeX (cannot append due to onload) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+        <!-- Markdown -->
+        <link rel="stylesheet" href="/highlight/styles/base16/snazzy.min.css"/>
+        <script src="/highlight/highlight.min.js"></script>
+        <!-- Append -->
+        <script> 
+            var content;
+            $.get('header.html', function(data){
+                content=data;
+                $('head').append(content);
+            });
+        </script>
+        <!-- Title and metadata -->
+        <title>Artis Vijups</title>
+        <meta name="description" content="vijups.eu">
+        <meta name="author" content="Artis Vijups">
+        <!-- Style -->
+        <link rel="stylesheet/less" type="text/css" href="style.less">
+        <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div id="wedge">
+            <canvas id="canv"></canvas>
+            <h1>Why isn't π a repeating decimal?</h1>
+            <div class="line-break"></div>
+            <div class="lip"></div>
+            <div class="line-break"></div>
+            <p>Originally written on December 20, 2023</p>
+        </div>
+        <div id="article">
+            <p>
+                <strong id="first">T</strong>o settle this question, let's try to go through a proof that the digits at the end of \(\pi=3.1415\ldots\) are non-repeating.
+The way to do this is by showing two separate things:
+</p>
+<ol>
+    <li>\(\pi\) is irrational.</li>
+    <li>If a number is irrational, then the digits at the end of that number are non-repeating.</li>
+</ol>
+<p>
+Before we begin - I'm assuming you've heard of \(\pi\) before, and that you know what the words <i>rational</i> and <i>irrational</i> mean. Essentially, I hope you've done a good job in Prealgebra.
+</p>
+<h2>
+1. \(\pi\) is irrational.
+</h2>
+<p>To begin, you'd need to know about <b>trigonometric functions</b>. Check out Introduction to Geometry for these! The main functions are called \(\sin,\cos,\tan\) and they talk about ratios in right triangles.
+</p><p>
+Then, you'd need to know about <b>Taylor series</b> for trigonometric functions. This is a task in the Calculus textbook. In the <a href="https://artofproblemsolving.com/school/recommendations">AoPS course map</a>, Calculus is the final core subject course.
+</p><p>
+It is possible, albeit very difficult, to combine those ideas to prove that \[\tan(x) = \cfrac{x}{1 - \cfrac{x^2}{3 - \cfrac{x^2}{5 - \cfrac{x^2}{7 - {}\ddots}}}}.\]
+</p><p>
+(Take the opportunity to admire the beauty of this equation. Especially if you multiply it by \(x\) on both sides. Stunning.)
+</p><p>
+In 1761, Johann Heinrich Lambert showed that if \(x\) is rational, then that big expression on the right is irrational.
+</p><p>
+He did this through a complicated <b>proof by infinite descent</b>. If you want to get a taste for what that means, <a href="https://en.wikipedia.org/wiki/Proof_by_infinite_descent#Irrationality_of_%E2%88%9A2">there's a great example on Wikipedia</a>. A couple AoPS books have a similar example, but there this strategy is avoided.
+</p><p>
+Next, we write the <b>contrapositive</b>. This idea is introduced in the Intermediate Counting and Probability textbook. Basically, we are allowed to rewrite our previous statement like this: if the big expression on the right is rational, then \(x\) is irrational.
+</p><p>
+To finish, let \(x=\frac{\pi}{4}.\) Our good work learning geometry tells us that \(\tan\left(\frac{\pi}4\right)=1.\) The big expression on the right is therefore equal to \(1,\) which is rational, and so \(x=\frac{\pi}{4}\) is irrational. It follows that \(\pi\) is irrational. \(\square\)</p>
+</p><h2>2. If a number is irrational, then the digits at the end of that number are non-repeating.</h2>
+<p>This question is easier in comparison, though that's probably not surprising.</p>
+
+<p>Again, we invoke the <b>contrapositive</b>. We can say that our question is equivalent to the following statement:</p>
+<blockquote>If the digits at the end of a number are repeating, then that number is rational.</blockquote>
+<p>Let's prove this!</p>
+
+<p>If our number \(n\) has repeating digits at the end, we can say that it is of the form \(n=A.B\overline{C},\) where \(A,B,C\) are finite sequences of digits. We put a line over \(C\) to denote that we repeat the sequence \(C\) over and over again, forever.
+</p><p>
+Let \(b\) and \(c\) be the number of digits in the sequences \(B\) and \(C\) respectively. Then, \[\begin{align*}10^{b}\cdot n&=AB.\overline{C}\\
+&=AB.CCC\ldots\\
+&=AB+\frac{C}{10^{c} }+\frac{C}{10^{2c} }+\frac{C}{10^{3c} }+\cdots\\
+&=AB+C\left(\frac{1}{10^{c} }+\frac{1}{10^{2c} }+\frac{1}{10^{3c} }+\cdots\right).\end{align*}\]
+Let's call the thing in parentheses \(S.\) Then, \[\begin{align*}10^c \cdot S &= 10^c\cdot \left(\frac{1}{10^{c} }+\frac{1}{10^{2c} }+\frac{1}{10^{3c} }+\cdots\right)\\
+10^c\cdot S &=1+\frac{1}{10^{c} }+\frac{1}{10^{2c} }+\frac{1}{10^{3c} }+\cdots\\
+10^c\cdot S&=1+S\\
+10^c\cdot S-S&=1\\
+S(10^c-1)&=1\\
+S&=\frac{1}{10^c-1}.\end{align*}\]</p>
+
+<p>This method for finding infinite sums appears in Introduction to Algebra B. To complete our work, we can substitute that result in!
+\[\begin{align*}10^{b}\cdot n&=AB+C\left(\frac{1}{10^{c} }+\frac{1}{10^{2c} }+\frac{1}{10^{3c} }+\cdots\right)\\
+&=AB+C\left(\frac{1}{10^{c}-1}\right)\\
+&=AB+\frac{C}{10^{c}-1}\\
+&=\frac{AB(10^{c}-1)+C}{10^{c}-1},\end{align*}\]
+and so \(n=\frac{AB(10^{c}-1)+C}{10^{b}(10^{c}-1)}.\) Both the numerator and the denominator are integers, so \(n\) is rational. \(\square\)</p>
+
+<p>We can actually test this! Say that we have \(n=2.611\overline{34}.\) We have \[A=2,B=611,C=34,b=3,c=2.\] According to our formula, we should have that \[n=\frac{2611(10^2-1)+34}{10^3(10^2-1)}=\frac{258523}{99000}.\] Plugging that into a calculator, we indeed get \(2.611343434\ldots,\) so this works!</p>
+
+<p>Finally, we can combine our two facts to say - \(\pi\) is irrational, hence the digits at the end of \(\pi\) are non-repeating. Victory!</p>
+
+<p>All of this demonstrates a few things.</p>
+<ul><li>A question can be really complicated. However, that shouldn't stop us from splitting it into steps, and we can look at the viable steps in depth. In fact, this is how a lot of math is taught, and for good reason!
+</li><li>Having a good understanding of many different kinds of math is really useful! This post combined knowledge from Algebra, Geometry, Counting and Calculus; I hope it was fun to see all these topics intermingling here.
+</li><li>Sometimes simple-looking questions have really difficult answers. In my experience, this is often true in competition math, so be wary of this!</li></ul>
+<p>There's also a couple things I didn't delve into in the above descriptions for brevity, but which seem good to know, and might answer some instinctive questions about this post.</p>
+
+<h2>The first proof isn't necessarily the best proof</h2>
+<p>This post discusses Lambert's proof for why \(\pi\) is irrational from 1761. This was the first proof that \(\pi\) is irrational!</p>
+
+<p>Since then, various mathematicians have come up with proofs which are arguably simpler. Nicolas Bourbaki (of <a href="https://youtu.be/6l8cNs8jIQs">Trench</a> fame) has (or have?) a pretty slick proof which you can read <a href="https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational#Bourbaki's_proof">here</a>, though it still involves trigonometry and calculus. I'm not aware of any proofs where either is absent.</p>
+
+<h2>Geometric series</h2>
+<p>A sequence like \(\frac{1}{10^c},\frac{1}{10^{2c}},\frac{1}{10^{3c}},\ldots\) is called geometric because the ratio of any two adjacent elements is the same.</p>
+
+<p>There exists a quick formula for finding the sum of any infinite geometric series, which is shown in the Introduction to Algebra textbook. This would allow us to avoid introducing \(S\) entirely.</p>
+
+<h2>Details on the contrapositive</h2>
+<p>The precise definition of the contrapositive of the statement "if A, then B" is "if not B, then not A". We can make a truth table like this:\[\begin{array}{|c|c||c||c|c||c|} \hline \text{A} & \text{B} & \text{if A, then B} & \text{not A} & \text{not B} & \text{if not B, then not A} \\ \hline \text{T} & \text{T} & \text{T} & \text{F} & \text{F} & \text{T} \\ \text{T} & \text{F} & \text{F} & \text{F} & \text{T} & \text{F} \\ \text{F} & \text{T} & \text{T} & \text{T} & \text{F} & \text{T} \\ \text{F} & \text{F} & \text{T} & \text{T} & \text{T} & \text{T} \\ \hline \end{array}\] We can see now that our statement and its contrapositive are equivalent. This allows us to freely substitute one for the other, which we do in both proofs.</p>
+
+<p>The inspiration for delving into this topic was a short exchange with <a href="https://artofproblemsolving.com/community/user/972598">@tennisbeast14</a>. It quickly blew up in size and became a blog post. Thanks for the curiosity!</p>
+        </div>
+        <script src="index.js" data-hue="300" id="balls"></script>
+        <div id="footer"></div>
+    </body>
+</html>
