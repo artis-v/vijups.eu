@@ -88,18 +88,20 @@
         touchZoom: false
       });
       const labelOffsets = {
-        "Dienvidkurzemes nov.": [-20, -20],
-        "Jelgavas nov.": [0, -15],
-        "Olaines nov.": [0, -10],
-        "Ķekavas nov.": [0, 5],
-        "Ropažu nov.": [5, 0],
-        "Salaspils nov.": [10, 0],
-        "Valkas nov.": [15, -10],
-        "Jēkabpils nov.": [-25, 0],
-        "Preiļu nov.": [0, -20],
-        "Augšdaugavas nov.": [0, 20],
-        "Ludzas nov.": [5, -5],
-        "Rēzeknes nov.": [-10, 25]
+        "Dienvidkurzemes nov.": [-0.2, -0.1],
+        "Jelgavas nov.": [0, -0.1],
+        "Olaines nov.": [0, -0.045],
+        "Ķekavas nov.": [0.15, 0.01],
+        "Ropažu nov.": [0.1, 0],
+        "Salaspils nov.": [0.15, 0],
+        "Valkas nov.": [0.12, -0.02],
+        "Valmieras nov.": [-0.05, 0.03],
+        "Aizkraukles nov.": [-0.18, 0.07],
+        "Jēkabpils nov.": [-0.17, -0.07],
+        "Preiļu nov.": [0, -0.08],
+        "Augšdaugavas nov.": [0, 0.08],
+        "Ludzas nov.": [0.06, -0.07],
+        "Rēzeknes nov.": [-0.1, 0.15]
       };
       const geojsonLayer = L.geoJSON(data, {
         onEachFeature: function (feature, layer) {
@@ -166,10 +168,7 @@
           const label = layer.feature.properties.LABEL;
           const center = layer.getBounds().getCenter();
           const offset = labelOffsets[label] || [0, 0];
-
-          const projected = map.latLngToLayerPoint(center);
-          const offsetPoint = L.point(projected.x + offset[0], projected.y - offset[1]);
-          const offsetLatLng = map.layerPointToLatLng(offsetPoint);
+          const offsetLatLng = {"lat": center["lat"] + offset[1], "lng": center["lng"] + offset[0]};
 
           L.marker(offsetLatLng, {
             icon: L.divIcon({
