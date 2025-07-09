@@ -1,0 +1,444 @@
+{
+    "definitions.csv": [
+      [
+        "Adrenalīns",
+        "Šūnas un organisma darbība",
+        "Hormons un neiromediators, kuru izdala virsnieru dziedzeri stresa situācijās."
+      ],
+      [
+        "Aktīvais vielu transports",
+        "Šūnas un organisma darbība",
+        "Vielu pārvietošanas process, kurā tiek tērēta enerģija – piemēram, nātrija jonu un kālija jonu transports ar olbaltumvielu pārnesēju starpniecību, fagocitoze un pinocitoze. Vielu transports notiek gan virzienā no ārpuses uz iekšpusi (endocitoze), gan no iekšpuses uz ārpusi (eksocitoze)."
+      ],
+      [
+        "Anafāze",
+        "Šūnu vairošanās",
+        "Šūnas dalīšanās trešā fāze, kuras laikā līdz tam pa pāriem apvienotās homologās hromosomas (mejozē) vai hromatīdas (mitozē) izšķiras un virzās uz pretējiem šūnas poliem."
+      ],
+      [
+        "Analizējošā krustošana",
+        "Pazīmju iedzimšana",
+        "Indivīda ar dominanto fenotipu genotipa noskaidrošana."
+      ],
+      [
+        "Antibakteriālā rezistence",
+        "Organisma imunitāte",
+        "Baktērijas spēja pretoties antibakteriālo līdzekļu darbībai."
+      ],
+      [
+        "Antibiotikas",
+        "Organisma imunitāte",
+        "Ķīmisko vielu vai to maisījumu grupa (sengrieķu: anti- – “pret’, biōtikós – “saistībā ar dzīvību”), kas nogalina baktērijas un citus mikroorganismus vai aizkavē to augšanu un vairošanos."
+      ],
+      [
+        "Antigēns",
+        "Organisma imunitāte",
+        "Viela, kas izsauc imūnsistēmas atbildi, kura izpaužas kā antivielu veidošana pret šo vielu."
+      ],
+      [
+        "Antivielas",
+        "Organisma imunitāte",
+        "Asins seruma olbaltumvielas (imūnglobulīni – Ig), kuru sintēzi izraisa kāds infekcijas slimības ierosinātājs (mikroorganisms vai vīruss), vakcīna vai cits antigēns."
+      ],
+      [
+        "Antivirālā rezistence",
+        "Organisma imunitāte",
+        "Vīrusa spēja pretoties antivirālo līdzekļu darbībai."
+      ],
+      [
+        "Ar dzimumu nesaistīta iedzimstošā pazīme",
+        "Pazīmju iedzimšana",
+        "Pazīme, ko nosaka gēni, kuri atrodas autosomās."
+      ],
+      [
+        "Ar dzimumu saistīta iedzimstošā pazīme",
+        "Pazīmju iedzimšana",
+        "Pazīme, ko nosaka gēni, kuri atrodas dzimumhromosomās."
+      ],
+      [
+        "Autosoma",
+        "Pazīmju iedzimšana",
+        "Hromosoma, kas nenosaka dzimumu."
+      ],
+      [
+        "Blastula",
+        "Šūnu vairošanās",
+        "Dzīvnieku attīstības agrā stadija, ko veido doba, ar šķidrumu pildīta šūnu lode. Blastulas sieniņa sastāv no viena šūnu slāņa."
+      ],
+      [
+        "Ciltskoku metode",
+        "Pazīmju iedzimšana",
+        "Metode pazīmju iedzimšanas pētīšanai vienas dzimtas vairākās paaudzēs."
+      ],
+      [
+        "Dabiski iegūta aktīvā imunitāte",
+        "Organisma imunitāte",
+        "Dabiski iegūta aktīvā imunitāte izveidojas, ja pārciesta kāda infekcijas slimība. Šāda imunitāte var būt īslaicīga, bet var arī saglabāties ilgstoši, dažreiz pat visu mūžu – piemēram, cilvēks parasti otrreiz neslimo ar bakām, masalām, poliomielītu."
+      ],
+      [
+        "Deplazmolīze",
+        "Šūnas un organisma darbība",
+        "Ūdens uzņemšana šūnā pēc plazmolīzes, ja šūna ievietota šķīdumā ar zemu sāļu koncentrāciju (zemāku nekā šūnsulā). Šūnas citoplazma piebriest un atgriežas normālā stāvoklī. Deplazmolīzei turpinoties, šūna piebriest un var pārplīst, ja uzņem pārāk daudz ūdens."
+      ],
+      [
+        "Dihibrīdiskā krustošana",
+        "Pazīmju iedzimšana",
+        "Hibridizācijas metode, ar kuru pēta divus pazīmju pārus un to iedzimšanu."
+      ],
+      [
+        "Diploīds hromosomu komplekts",
+        "Šūnu vairošanās",
+        "Hromosomu kopums šūnā (to skaits ir '2n') laikā, kad hromosomas ir sakārtotas pa pāriem (homologās hromosomas). Raksturīgs somatiskajām šūnām."
+      ],
+      [
+        "Dizigotiskie dvīņi",
+        "Šūnu vairošanās",
+        "Dvīņi, kas ir attīstījušies no divām apaugļotām olšūnām."
+      ],
+      [
+        "Dominantā pazīme",
+        "Pazīmju iedzimšana",
+        "Pazīme, kas spēj nomākt recesīvo pazīmi."
+      ],
+      [
+        "Eikarioti",
+        "Šūnas un organisma darbība",
+        "Vienšūnas un daudzšūnu organismi, piemēram, sēnes, augi, dzīvnieki u. c., kuru šūnās ir kodols, kas norobežots ar divām membrānām."
+      ],
+      [
+        "Endoplazmatiskais tīkls",
+        "Šūnas un organisma darbība",
+        "Šūnas organoīds, no membrānām veidota sazarota plakanu dobumu, pūslīšu un kanāliņu sistēma. Graudainajā endoplazmatiskajā tīklā atrodas liels daudzums ribosomu, kurās notiek olbaltumvielu sintēze. Gludais endoplazmatiskais tīkls piedalās daudzās vielmaiņas norisēs – lipīdu, fosfolipīdu, taukskābju un steroīdu sintēzē, ogļhidrātu maiņā un kalcija rezerves veidošanā."
+      ],
+      [
+        "Enzīmi jeb fermenti",
+        "Šūnas un organisma darbība",
+        "Bioloģiskās lielmolekulas, kuras katalizē (paātrina reakcijas norisi) dzīvības procesu ķīmiskās reakcijas. Gandrīz visi enzīmi (grieķu: enzumon – “iekšā” un “ieraugs”) jeb fermenti (latīņu: fermentum – “ieraugs”) ir olbaltumvielas. Parasti katrs enzīms spēj katalizēt tikai noteikta veida bioķīmisko reakciju."
+      ],
+      [
+        "Epidēmija",
+        "Organisma imunitāte",
+        "Masveida saslimšana ar kādu infekcijas slimību noteiktā laika posmā un vietā, ievērojami pārsniedzot parasto saslimstības līmeni."
+      ],
+      [
+        "Estrogēns",
+        "Šūnas un organisma darbība",
+        "Sievišķais hormons, kuru producē galvenokārt olnīcas un kurš nosaka sievišķās dzimumpazīmes un nodrošina olšūnu nobriešanu."
+      ],
+      [
+        "Fenotips",
+        "Pazīmju iedzimšana",
+        "Organisma pazīmju kopums."
+      ],
+      [
+        "Ģenētika",
+        "Pazīmju iedzimšana",
+        "Bioloģijas zinātnes apakšnozare, kas pēta organismu iedzimtību un mainību."
+      ],
+      [
+        "Ģenētiski modificēts organisms (ĢMO)",
+        "DNS noslēpumi",
+        "Jebkurš organisms, kura gēni ir mainīti, izmantojot gēnu inženierijas tehnoloģijas."
+      ],
+      [
+        "Genotips",
+        "Pazīmju iedzimšana",
+        "Organisma ģenētiskās informācijas kopums."
+      ],
+      [
+        "Gēns",
+        "DNS noslēpumi",
+        "DNS vai RNS fragments, kas nosaka olbaltumvielu molekulas sintēzi."
+      ],
+      [
+        "Gēnu inženierija",
+        "DNS noslēpumi",
+        "Tehnoloģija, kas ļauj veikt manipulācijas ar organisma ģenētisko materiālu un pārveidot to tā, kā tas nenotiek dabiskajos apstākļos."
+      ],
+      [
+        "Gēnu terapija",
+        "DNS noslēpumi",
+        "Metode, ar kuras palīdzību novērš vai atvieglo iedzimtās slimības vai defektus."
+      ],
+      [
+        "Gēnu terapija ex vivo (ārpus organisma)",
+        "DNS noslēpumi",
+        "Gēnu terapija, kad no pacienta organisma tiek paņemtas šūnas, kas tiek ģenētiski pārveidotas un tad atkal ievietotas pacienta organismā."
+      ],
+      [
+        "Gēnu terapija in vivo (dzīvā organismā)",
+        "DNS noslēpumi",
+        "Gēnu terapija, kad slimības novēršanai šūnas tiek ģenētiski pārveidotas pacienta organismā."
+      ],
+      [
+        "Glikagons",
+        "Šūnas un organisma darbība",
+        "Aizkuņģa dziedzera hormons, kas paaugstina glikozes daudzumu asinīs."
+      ],
+      [
+        "Goldži komplekss",
+        "Šūnas un organisma darbība",
+        "Sīku, ar membrānu klātu sfērisku pūslīšu, “cisternu”, caurulīšu kopums. Goldži komplekss satur fermentus, kuri pārveido ogļhidrātus un olbaltumvielas par glikoproteīniem. Tie ir nepieciešami membrānas veidošanā un ārpus šūnas notiekošajās reakcijās. No Goldži kompleksa atdalās pūslīši ar sintezētām vielām un virzās uz dažādām šūnas vietām, kur šīs vielas ir nepieciešamas. Goldži komplekss piedalās ieslēgumu, lizosomu veidošanā un olbaltumvielu, ogļhidrātu, lipīdu sintēzē."
+      ],
+      [
+        "Haploīds hromosomu komplekts",
+        "Šūnu vairošanās",
+        "Hromosomu kopums dzimumšūnās. Haploīdais hromosomu skaits (n) atbilst pusei no sugai raksturīgā diploīdā hromosomu skaita."
+      ],
+      [
+        "Hipertonisks šķīdums",
+        "Šūnas un organisma darbība",
+        "Šķīdums, kurā sāļu koncentrācija ir augstāka nekā šūnā."
+      ],
+      [
+        "Hipotonisks šķīdums",
+        "Šūnas un organisma darbība",
+        "Šķīdums, kurā sāļu koncentrācija ir zemāka nekā šūnā."
+      ],
+      [
+        "Hromosoma",
+        "DNS noslēpumi",
+        "Pavedienveida struktūra šūnas kodolā, kura spēj pati sevi atjaunot un satur šūnas galveno ģenētisko informāciju. Tā ir veidota no DNS un ar DNS saistītām olbaltumvielām."
+      ],
+      [
+        "Iedzimtā imunitāte",
+        "Organisma imunitāte",
+        "Imunitāte, kuru nodrošina organisma iedzimtās īpašības. Piemēram, iedzimtās imunitātes dēļ cilvēki neslimo ar daudzām dzīvnieku slimībām, savukārt dzīvnieki neslimo ar cilvēku slimībām."
+      ],
+      [
+        "Iedzimtība",
+        "Pazīmju iedzimšana",
+        "Pazīmju pēctecība paaudžu mijā jeb spēja nodot savas pazīmes nākamajām paaudzēm."
+      ],
+      [
+        "Iegūtā imunitāte",
+        "Organisma imunitāte",
+        "Imunitāte, kura rodas dzīves laikā un neiedzimst pēcnācējam."
+      ],
+      [
+        "Insulīns",
+        "Šūnas un organisma darbība",
+        "Aizkuņģa dziedzera hormons, kas pazemina glikozes daudzumu asinīs."
+      ],
+      [
+        "Interfāze",
+        "Šūnu vairošanās",
+        "Šūnas stāvoklis starp divām dalīšanās reizēm."
+      ],
+      [
+        "Izotonisks šķīdums",
+        "Šūnas un organisma darbība",
+        "Šķīdums, kurā sāļu koncentrācija ir tāda pati kā šūnā."
+      ],
+      [
+        "Klonēšana",
+        "Šūnu vairošanās",
+        "Ģenētiski identisku gēnu, šūnu vai veselu organismu iegūšana un pavairošana bezdzimumu (vai bezdzimumvairošanās) ceļā."
+      ],
+      [
+        "Lipīdi",
+        "Šūnas un organisma darbība",
+        "Visdažādākie tauki un taukiem līdzīgi ūdenī nešķīstošie savienojumi. Lipīdu grupas pārstāvji tauki un eļļas ir enerģijas rezerves krātuves. Tauki šķīst tikai organiskos šķīdumos. Pie lipīdiem pieder vienkāršie lipīdi (tauki, eļļas, vaski), saliktie lipīdi (fosfolipīdi, lipoproteīni) un steroīdi (holesterīns)."
+      ],
+      [
+        "“Lipīgie gali”",
+        "DNS noslēpumi",
+        "Vienpavediena DNS fragmenti, kas veidojas pēc restriktāzes iedarbības."
+      ],
+      [
+        "Lizosoma",
+        "Šūnas un organisma darbība",
+        "Šūnas organoīds, kas satur lielu daudzumu enzīmu (hidrolāzes, ribonukleāzes, fosfolipāzi un citus). Lizosomas veic gremošanas funkciju šūnā un arī aizsargfunkciju (iznīcina šūnai svešas daļiņas un pašas šūnas nevajadzīgās struktūras)."
+      ],
+      [
+        "Mainība",
+        "Pazīmju iedzimšana",
+        "Pazīmju izmainīšanās gan vienā paaudzē, gan paaudžu mijā. Organisma spēja iegūt jaunas pazīmes"
+      ],
+      [
+        "Mākslīgi iegūta aktīvā imunitāte",
+        "Organisma imunitāte",
+        "Mākslīgi iegūtu aktīvo imunitāti rada, ievadot organismā vakcīnas, kas satur attiecīgi apstrādātus, novājinātus slimības ierosinātājus – antigēnus."
+      ],
+      [
+        "Mejoze",
+        "Šūnu vairošanās",
+        "Šūnu kodolu dalīšanās, kas nodrošina haploīdu šūnu veidošanos no diploīdām šūnām. Veidojas gametas (n) jeb dzimumšūnas."
+      ],
+      [
+        "Metafāze",
+        "Šūnu vairošanās",
+        "Šūnas otrā dalīšanās fāze mitozē un mejozē. Metafāzes laikā hromosomas ir spiralizētas un novietojas šūnas dalīšanās vārpstas ekvatoriālajā plaknē. Mejozē I ekvatoriālajā plaknē ir novietojušies hromosomu pāri."
+      ],
+      [
+        "Mitoze",
+        "Šūnu vairošanās",
+        "Somatisko šūnu kodolu dalīšanās, kas nodrošina nemainīga hromosomu skaita saglabāšanos meitšūnās, jo katra hromosoma pirms dalīšanās dubultojas un veido izejmateriālu divām hromosomām."
+      ],
+      [
+        "Monohibrīdiskā krustošana",
+        "Pazīmju iedzimšana",
+        "Hibridizācijas metode, ar kuru  pēta viena pazīmju pāra iedzimšanu."
+      ],
+      [
+        "Monozigotiskie dvīņi",
+        "Šūnu vairošanās",
+        "Dvīņi, kas ir attīstījušies no vienas apaugļotas olšūnas."
+      ],
+      [
+        "Mutācija",
+        "Šūnu vairošanās",
+        "Gēnu (DNS sastāva), hromosomu struktūras vai hromosomu skaita pārmaiņa, kura var tikt nodota pēcnācējiem."
+      ],
+      [
+        "Mutagēnais faktors",
+        "Šūnu vairošanās",
+        "Mutācijas izraisošs faktors, piemēram, radioaktīvais starojums."
+      ],
+      [
+        "Ogļhidrāti",
+        "Šūnas un organisma darbība",
+        "Ķīmiski savienojumi, kas sastāv no oglekļa, ūdeņraža un skābekļa. Uzturā galvenie ogļhidrātu avoti ir graudaugi un to produkti, cukurs, medus, saldumi, kartupeļi, augļi, ogas, dārzeņi. Ogļhidrāti nodrošina organismu ar enerģiju, un apmēram puse no visa dienā nepieciešamā enerģijas daudzuma jāsaņem ar ogļhidrātiem."
+      ],
+      [
+        "Olbaltumvielas",
+        "Šūnas un organisma darbība",
+        "Lielmolekulāri organiski savienojumi, kurus veido 20 dažādas aminoskābes. Katrai sugai ir specifiskas olbaltumvielas. Tās veic daudzveidīgas funkcijas – katalītisko funkciju, uzbūves funkciju, aizsargfunkciju, transportfunkciju u. c."
+      ],
+      [
+        "Oocīts",
+        "Šūnu vairošanās",
+        "Nenogatavojusies olšūna."
+      ],
+      [
+        "Osmoze",
+        "Šūnas un organisma darbība",
+        "Process, kurā šķīdinātājs (dzīvajā dabā tas ir ūdens) vienvirziena kustībā caur puscaurlaidīgu membrānu plūst uz šķīdumu ar augstāku izšķīdušās vielas (piemēram, vārāmā sāls jeb nātrija hlorīda) koncentrāciju."
+      ],
+      [
+        "Pandēmija",
+        "Organisma imunitāte",
+        "Epidēmija ļoti plašā teritorijā (piemēram, vairākās valstīs, kontinentos vai visā pasaulē)."
+      ],
+      [
+        "Pasīvā iegūtā imunitāte",
+        "Organisma imunitāte",
+        "Dabiski iegūta pasīvā imunitāte ir jaundzimušajiem un zīdaiņiem pirmajos dzīves mēnešos. Ja māte ir pārcietusi kādu infekcijas slimību, pēc kuras izveidojas imunitāte, pirmajos mēnešos pēc piedzimšanas ar šo slimību nesaslims arī bērns – viņš no mātes caur placentu vai ar mātes pienu būs saņēmis pietiekami daudz antivielu."
+      ],
+      [
+        "Pasīvais vielu transports",
+        "Šūnas un organisma darbība",
+        "Vielu pārvietošanas process, kurā netiek tērēta enerģija – piemēram, sāļu difūzija, ūdens osmoze caur membrānām un atvieglinātais transports ar olbaltumvielu pārnesēju."
+      ],
+      [
+        "Plazmatiskā membrāna",
+        "Šūnas un organisma darbība",
+        "Šūnas organoīds, kas darbojas kā barjera starp šūnu un apkārtējo vidi. Šūnas plazmatiskā membrāna gan aizsargā šūnu, gan nosaka molekulu iekļūšanu šūnā un izkļūšanu no tās."
+      ],
+      [
+        "Plazmīda",
+        "DNS noslēpumi",
+        "Maza gredzenveida DNS molekula baktēriju šūnās."
+      ],
+      [
+        "Plazmolīze",
+        "Šūnas un organisma darbība",
+        "Šūnas citoplazmas atdalīšanās no šūnapvalka ūdens zaudēšanas rezultātā, kas notiek osmozes procesā, ja šūnu ievieto šķīdumā ar augstāku sāļu koncentrāciju nekā šūnsulā."
+      ],
+      [
+        "Profāze",
+        "Šūnu vairošanās",
+        "Mitozes un mejozes pirmā fāze, kurā sākas hromosomu spiralizācija, izzūd kodoliņš un šūnas kodola apvalks."
+      ],
+      [
+        "Progesterons",
+        "Šūnas un organisma darbība",
+        "Sievišķais hormons, kuru producē galvenokārt olnīcas un kurš regulē grūtniecības norisi."
+      ],
+      [
+        "Prokarioti",
+        "Šūnas un organisma darbība",
+        "Vienšūnas organismi, kuram nav ar membrānu norobežota kodola un ar membrānām norobežotu šūnas organoīdu, piemēram, baktērijas."
+      ],
+      [
+        "Recesīvā pazīme",
+        "Pazīmju iedzimšana",
+        "Pazīme, kuru nomāc dominantā pazīme un kura izpaužas tikai tad, ja to nosaka divu vienādu gēna recesīvo alēļu pāris."
+      ],
+      [
+        "Reproduktīvā klonēšana",
+        "Šūnu vairošanās",
+        "Jauna organisma iegūšana ar klonēšanas metodēm."
+      ],
+      [
+        "Restriktāze",
+        "DNS noslēpumi",
+        "Enzīms, kas “pārgriež” organisma DNS noteiktā vietā."
+      ],
+      [
+        "Ribosoma",
+        "Šūnas un organisma darbība",
+        "Sīks šūnas organoīds, kas atrodas šūnas citoplazmā un graudainajā endoplazmatiskajā tīklā. Ribosomas no šūnā esošajām aminoskābēm sintezē attiecīgajai šūnai raksturīgās olbaltumvielas."
+      ],
+      [
+        "Serums",
+        "Organisma imunitāte",
+        "Asins plazma, kas satur gatavas antivielas, piemēram, pret čūskas indi."
+      ],
+      [
+        "Somatiskā šūna",
+        "Šūnu vairošanās",
+        "Jebkura organismu veidojoša šūna, kas nav dzimumšūna."
+      ],
+      [
+        "Telofāze",
+        "Šūnu vairošanās",
+        "Šūnas dalīšanās pēdējā fāze, kurā hromosomas despiralizējas, veidojas jauno šūnu kodola apvalki un dalās citoplazma."
+      ],
+      [
+        "Terapeitiskā klonēšana",
+        "Šūnu vairošanās",
+        "Transplantēšanai nepieciešamo audu un orgānu klonēšana."
+      ],
+      [
+        "Testosterons",
+        "Šūnas un organisma darbība",
+        "Vīrišķais hormons, kuru producē sēklinieki un kurš nosaka vīrišķās dzimumpazīmes."
+      ],
+      [
+        "Toksīni",
+        "Organisma imunitāte",
+        "Indīgas vielas, ko izdala patogēnās baktērijas, daži augi un dzīvnieki. Visi toksīni ir aktīvi antigēni, kas dzīvnieku un cilvēku organismā izraisa tādu specifisku antivielu rašanos, kuras neitralizē attiecīgo toksīnu."
+      ],
+      [
+        "Transplantācija",
+        "DNS noslēpumi",
+        "Ķirurģiska operācija, kuras laikā audi vai orgāni tiek pārstādīti citas personas (recipienta) organismā."
+      ],
+      [
+        "Vakcīna",
+        "Organisma imunitāte",
+        "Medikaments, kuru lieto slimības profilaksei. Vakcīnas sastāvā ietilpst aktīvā viela, kas izraisa imūnsistēmas atbildes reakciju, kā rezultātā organismā veidojas antivielas."
+      ],
+      [
+        "Vektors",
+        "DNS noslēpumi",
+        "Plazmīda vai vīruss, kuru izmantoto DNS pārnešanai un ievadīšanai citā šūnā."
+      ],
+      [
+        "Vīruss",
+        "DNS noslēpumi",
+        "Bezšūnu dzīvības forma. Tas ir iekššūnu parazīts – spēj vairoties, izmantojot šūnu resursus."
+      ],
+      [
+        "Vitamīni",
+        "Šūnas un organisma darbība",
+        "Bioloģiski aktīvi organiski savienojumi, kuri nelielā daudzumā ir nepieciešami organisma normālai funkcionēšanai. Vitamīnus organisms nespēj veidot pats, tādēļ tie ir jāuzņem ar uzturu. Vitamīni organismā netiek izmantoti kā enerģētiskais vai plastiskais materiāls, tie ir nepieciešami vielmaiņas bioķīmiskajos procesos."
+      ],
+      [
+        "Zigota",
+        "Šūnu vairošanās",
+        "Zigota (no grieķu ζυγωτόν pārī savienots) – šūna, kas izveidojusies, saplūstot divām gametām. Tā ir pamats jauna organisma attīstībai. Zigota satur tēva un mātes hromosomu komplektus un līdz ar to organisma attīstībai nepieciešamo informāciju."
+      ]
+    ]
+  }
