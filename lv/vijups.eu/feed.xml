@@ -4,7 +4,7 @@
   <id>https://vijups.eu/</id>
   <title>Artis Vijups</title>
   <subtitle>Personal website of Artis Vijups, mathematician and programmer.</subtitle>
-  <updated>2025-07-09T20:06:21+03:00</updated>
+  <updated>2025-07-09T20:14:20+03:00</updated>
   <author>
     <name>Artis Vijups</name>
     <uri>https://vijups.eu/</uri>
@@ -68,14 +68,14 @@
 
   
   <entry>
-    <title>Why pi is a repeating decimal</title>
-    <link href="https://vijups.eu/posts/why-pi-repeats/" rel="alternate" type="text/html" title="Why pi is a repeating decimal" />
+    <title>Why pi is not a repeating decimal</title>
+    <link href="https://vijups.eu/posts/pi/" rel="alternate" type="text/html" title="Why pi is not a repeating decimal" />
     <published>2023-12-20T07:37:00+02:00</published>
   
     <updated>2025-07-08T21:59:00+03:00</updated>
   
-    <id>https://vijups.eu/posts/why-pi-repeats/</id>
-    <content type="text/html" src="https://vijups.eu/posts/why-pi-repeats/" />
+    <id>https://vijups.eu/posts/pi/</id>
+    <content type="text/html" src="https://vijups.eu/posts/pi/" />
     <author>
       <name>Artis Vijups</name>
     </author>

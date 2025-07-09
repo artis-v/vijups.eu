@@ -16,8 +16,8 @@
     "content": "Problemsets and study materials, among other things"
   },
   {
-    "title": "Why pi is a repeating decimal",
-    "url": "/posts/why-pi-repeats/",
+    "title": "Why pi is not a repeating decimal",
+    "url": "/posts/pi/",
     "categories": "Mathematics",
     "tags": "aops, geometry, trigonometry, infinite series",
     "date": "2023-12-20 07:37:00 +0200",
