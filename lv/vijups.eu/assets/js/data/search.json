@@ -1,5 +1,13 @@
 [
   {
+    "title": "Polynomial division for olympiads",
+    "url": "/posts/polynomial-division/",
+    "categories": "Mathematics, Competition mathematics",
+    "tags": "zpd, algebra, polynomials",
+    "date": "2025-07-11 00:55:00 +0300",
+    "content": "A look at the rational root theorem, polynomial division, and problems from the Latvian Open Mathematics Olympiad"
+  },
+  {
     "title": "How to make a better map of regions",
     "url": "/posts/pattern-map/",
     "categories": "Programming",

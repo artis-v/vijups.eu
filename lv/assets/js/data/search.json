@@ -1,5 +1,13 @@
 [
   {
+    "title": "Polinoma dalīšana ar binomu priekš olimpiādēm",
+    "url": "/posts/polynomial-division/",
+    "categories": "Matemātika, Matemātika olimpiādēm",
+    "tags": "zpd, algebra, polinomi",
+    "date": "2025-07-11 00:55:00 +0300",
+    "content": "Ieskats racionālo sakņu teorēmā, polinomu dalīšanā un Atklātās matemātikas olimpiādes uzdevumos"
+  },
+  {
     "title": "Kā uztaisīt labāku novadu karti",
     "url": "/posts/pattern-map/",
     "categories": "Programmēšana",

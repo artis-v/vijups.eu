@@ -313,6 +313,28 @@
             
             
                 <url>
+                    <loc>https://vijups.eu/tags/algebra/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
+                    <loc>https://vijups.eu/tags/polynomials/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
                     <loc>https://vijups.eu/categories/mathematics/</loc>
                     
                 </url>
@@ -341,9 +363,25 @@
             
         
     
+        
+        
+            
+            
+                <url>
+                    <loc>https://vijups.eu/categories/competition-mathematics/</loc>
+                    
+                </url>
+            
+        
+    
 
     
     
+        
+            <url>
+                <loc>https://vijups.eu/posts/polynomial-division/</loc>
+                <lastmod>2025-07-11T00:55:00+03:00</lastmod>
+            </url>
         
             <url>
                 <loc>https://vijups.eu/posts/pattern-map/</loc>
@@ -364,17 +402,17 @@
         
             <url>
                 <loc>https://vijups.eu/about/</loc>
-                <lastmod>2025-07-09T21:33:05+03:00</lastmod>
+                <lastmod>2025-07-11T02:59:22+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/categories/</loc>
-                <lastmod>2025-07-09T21:33:05+03:00</lastmod>
+                <lastmod>2025-07-11T02:59:22+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/tags/</loc>
-                <lastmod>2025-07-09T21:33:05+03:00</lastmod>
+                <lastmod>2025-07-11T02:59:22+03:00</lastmod>
             </url>
         
     
@@ -692,6 +730,28 @@
             
             
                 <url>
+                    <loc>https://vijups.eu/lv/tags/algebra/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
+                    <loc>https://vijups.eu/lv/tags/polynomials/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
                     <loc>https://vijups.eu/lv/categories/mathematics/</loc>
                     
                 </url>
@@ -720,9 +780,25 @@
             
         
     
+        
+        
+            
+            
+                <url>
+                    <loc>https://vijups.eu/lv/categories/competition-mathematics/</loc>
+                    
+                </url>
+            
+        
+    
 
     
     
+        
+            <url>
+                <loc>https://vijups.eu/lv/posts/polynomial-division/</loc>
+                <lastmod>2025-07-11T00:55:00+03:00</lastmod>
+            </url>
         
             <url>
                 <loc>https://vijups.eu/lv/posts/pattern-map/</loc>
@@ -743,17 +819,17 @@
         
             <url>
                 <loc>https://vijups.eu/lv/about/</loc>
-                <lastmod>2025-07-09T21:33:05+03:00</lastmod>
+                <lastmod>2025-07-11T02:59:22+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/lv/categories/</loc>
-                <lastmod>2025-07-09T21:33:05+03:00</lastmod>
+                <lastmod>2025-07-11T02:59:22+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/lv/tags/</loc>
-                <lastmod>2025-07-09T21:33:05+03:00</lastmod>
+                <lastmod>2025-07-11T02:59:22+03:00</lastmod>
             </url>
         
     

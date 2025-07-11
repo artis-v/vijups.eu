@@ -4,7 +4,7 @@
   <id>https://vijups.eu/</id>
   <title>Artis Vijups</title>
   <subtitle>Personal website of Artis Vijups, mathematician and programmer.</subtitle>
-  <updated>2025-07-09T21:33:08+03:00</updated>
+  <updated>2025-07-11T02:59:24+03:00</updated>
   <author>
     <name>Artis Vijups</name>
     <uri>https://vijups.eu/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Polinoma dalīšana ar binomu priekš olimpiādēm</title>
+    <link href="https://vijups.eu/lv/posts/polynomial-division/" rel="alternate" type="text/html" title="Polinoma dalīšana ar binomu priekš olimpiādēm" />
+    <published>2025-07-11T00:55:00+03:00</published>
+  
+    <updated>2025-07-11T00:55:00+03:00</updated>
+  
+    <id>https://vijups.eu/posts/polynomial-division/</id>
+    <content type="text/html" src="https://vijups.eu/posts/polynomial-division/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Matemātika" />
+    
+    <category term="Matemātika olimpiādēm" />
+    
+  
+
+  <summary>Ieskats racionālo sakņu teorēmā, polinomu dalīšanā un Atklātās matemātikas olimpiādes uzdevumos</summary>
+
+  </entry>
 
   
   <entry>
