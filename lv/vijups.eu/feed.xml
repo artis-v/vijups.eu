@@ -4,7 +4,7 @@
   <id>https://vijups.eu/</id>
   <title>Artis Vijups</title>
   <subtitle>Personal website of Artis Vijups, mathematician and programmer.</subtitle>
-  <updated>2025-07-11T03:14:12+03:00</updated>
+  <updated>2025-07-11T17:17:51+03:00</updated>
   <author>
     <name>Artis Vijups</name>
     <uri>https://vijups.eu/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Cauchy's inequality for olympiads</title>
+    <link href="https://vijups.eu/posts/cauchy-inequality/" rel="alternate" type="text/html" title="Cauchy&amp;apos;s inequality for olympiads" />
+    <published>2025-07-11T16:55:00+03:00</published>
+  
+    <updated>2025-07-11T16:55:00+03:00</updated>
+  
+    <id>https://vijups.eu/posts/cauchy-inequality/</id>
+    <content type="text/html" src="https://vijups.eu/posts/cauchy-inequality/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Mathematics" />
+    
+    <category term="Competition mathematics" />
+    
+  
+
+  <summary>A look at Cauchy&amp;#39;s inequality and problems from the Latvian Open Mathematics Olympiad</summary>
+
+  </entry>
 
   
   <entry>

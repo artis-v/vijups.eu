@@ -335,6 +335,17 @@
             
             
                 <url>
+                    <loc>https://vijups.eu/tags/inequalities/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
                     <loc>https://vijups.eu/categories/mathematics/</loc>
                     
                 </url>
@@ -379,6 +390,11 @@
     
         
             <url>
+                <loc>https://vijups.eu/posts/cauchy-inequality/</loc>
+                <lastmod>2025-07-11T16:55:00+03:00</lastmod>
+            </url>
+        
+            <url>
                 <loc>https://vijups.eu/posts/polynomial-division/</loc>
                 <lastmod>2025-07-11T00:55:00+03:00</lastmod>
             </url>
@@ -402,17 +418,17 @@
         
             <url>
                 <loc>https://vijups.eu/about/</loc>
-                <lastmod>2025-07-11T03:14:12+03:00</lastmod>
+                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/categories/</loc>
-                <lastmod>2025-07-11T03:14:12+03:00</lastmod>
+                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/tags/</loc>
-                <lastmod>2025-07-11T03:14:12+03:00</lastmod>
+                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
             </url>
         
     
@@ -752,6 +768,17 @@
             
             
                 <url>
+                    <loc>https://vijups.eu/lv/tags/inequalities/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
                     <loc>https://vijups.eu/lv/categories/mathematics/</loc>
                     
                 </url>
@@ -796,6 +823,11 @@
     
         
             <url>
+                <loc>https://vijups.eu/lv/posts/cauchy-inequality/</loc>
+                <lastmod>2025-07-11T16:55:00+03:00</lastmod>
+            </url>
+        
+            <url>
                 <loc>https://vijups.eu/lv/posts/polynomial-division/</loc>
                 <lastmod>2025-07-11T00:55:00+03:00</lastmod>
             </url>
@@ -819,17 +851,17 @@
         
             <url>
                 <loc>https://vijups.eu/lv/about/</loc>
-                <lastmod>2025-07-11T03:14:12+03:00</lastmod>
+                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/lv/categories/</loc>
-                <lastmod>2025-07-11T03:14:12+03:00</lastmod>
+                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/lv/tags/</loc>
-                <lastmod>2025-07-11T03:14:12+03:00</lastmod>
+                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
             </url>
         
     
