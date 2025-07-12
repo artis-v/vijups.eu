@@ -4,7 +4,7 @@
   <id>https://vijups.eu/</id>
   <title>Artis Vijups</title>
   <subtitle>Personal website of Artis Vijups, mathematician and programmer.</subtitle>
-  <updated>2025-07-11T17:17:51+03:00</updated>
+  <updated>2025-07-12T18:05:10+03:00</updated>
   <author>
     <name>Artis Vijups</name>
     <uri>https://vijups.eu/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Simson line for olympiads</title>
+    <link href="https://vijups.eu/posts/simson-line/" rel="alternate" type="text/html" title="Simson line for olympiads" />
+    <published>2025-07-12T13:55:00+03:00</published>
+  
+    <updated>2025-07-12T13:55:00+03:00</updated>
+  
+    <id>https://vijups.eu/posts/simson-line/</id>
+    <content type="text/html" src="https://vijups.eu/posts/simson-line/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Mathematics" />
+    
+    <category term="Competition mathematics" />
+    
+  
+
+  <summary>What is the Simson line, and a relevant Latvian Open Mathematics Olympiad problem</summary>
+
+  </entry>
 
   
   <entry>
@@ -72,35 +98,11 @@
 
   
   <entry>
-    <title>How to make a better map of regions</title>
-    <link href="https://vijups.eu/posts/pattern-map/" rel="alternate" type="text/html" title="How to make a better map of regions" />
-    <published>2025-07-09T17:15:00+03:00</published>
-  
-    <updated>2025-07-09T17:15:00+03:00</updated>
-  
-    <id>https://vijups.eu/posts/pattern-map/</id>
-    <content type="text/html" src="https://vijups.eu/posts/pattern-map/" />
-    <author>
-      <name>Artis Vijups</name>
-    </author>
-
-  
-    
-    <category term="Programming" />
-    
-  
-
-  <summary>Because the one from LSM is painful to look at</summary>
-
-  </entry>
-
-  
-  <entry>
     <title>Masterpost - collection of select works from previous years</title>
     <link href="https://vijups.eu/posts/masterpost/" rel="alternate" type="text/html" title="Masterpost - collection of select works from previous years" />
-    <published>2025-07-09T13:50:00+03:00</published>
+    <published>2025-07-09T17:50:00+03:00</published>
   
-    <updated>2025-07-09T13:50:00+03:00</updated>
+    <updated>2025-07-09T17:50:00+03:00</updated>
   
     <id>https://vijups.eu/posts/masterpost/</id>
     <content type="text/html" src="https://vijups.eu/posts/masterpost/" />
@@ -120,25 +122,25 @@
 
   
   <entry>
-    <title>Why pi is not a repeating decimal</title>
-    <link href="https://vijups.eu/posts/pi/" rel="alternate" type="text/html" title="Why pi is not a repeating decimal" />
-    <published>2023-12-20T07:37:00+02:00</published>
+    <title>How to make a better map of regions</title>
+    <link href="https://vijups.eu/posts/pattern-map/" rel="alternate" type="text/html" title="How to make a better map of regions" />
+    <published>2025-07-09T17:15:00+03:00</published>
   
-    <updated>2025-07-08T21:59:00+03:00</updated>
+    <updated>2025-07-09T17:15:00+03:00</updated>
   
-    <id>https://vijups.eu/posts/pi/</id>
-    <content type="text/html" src="https://vijups.eu/posts/pi/" />
+    <id>https://vijups.eu/posts/pattern-map/</id>
+    <content type="text/html" src="https://vijups.eu/posts/pattern-map/" />
     <author>
       <name>Artis Vijups</name>
     </author>
 
   
     
-    <category term="Mathematics" />
+    <category term="Programming" />
     
   
 
-  <summary>An accessible journey through Lambert&amp;#39;s proof</summary>
+  <summary>Because the one from LSM is painful to look at</summary>
 
   </entry>
 

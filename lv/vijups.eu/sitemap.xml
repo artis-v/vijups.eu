@@ -247,28 +247,6 @@
             
             
                 <url>
-                    <loc>https://vijups.eu/tags/zpd/</loc>
-                    
-                </url>
-            
-        
-    
-        
-        
-            
-            
-                <url>
-                    <loc>https://vijups.eu/tags/competitive-programming/</loc>
-                    
-                </url>
-            
-        
-    
-        
-        
-            
-            
-                <url>
                     <loc>https://vijups.eu/tags/python/</loc>
                     
                 </url>
@@ -303,6 +281,28 @@
             
                 <url>
                     <loc>https://vijups.eu/tags/geopandas/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
+                    <loc>https://vijups.eu/tags/zpd/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
+                    <loc>https://vijups.eu/tags/competitive-programming/</loc>
                     
                 </url>
             
@@ -357,7 +357,7 @@
             
             
                 <url>
-                    <loc>https://vijups.eu/categories/personal/</loc>
+                    <loc>https://vijups.eu/categories/programming/</loc>
                     
                 </url>
             
@@ -368,7 +368,7 @@
             
             
                 <url>
-                    <loc>https://vijups.eu/categories/programming/</loc>
+                    <loc>https://vijups.eu/categories/personal/</loc>
                     
                 </url>
             
@@ -390,6 +390,11 @@
     
         
             <url>
+                <loc>https://vijups.eu/posts/simson-line/</loc>
+                <lastmod>2025-07-12T13:55:00+03:00</lastmod>
+            </url>
+        
+            <url>
                 <loc>https://vijups.eu/posts/cauchy-inequality/</loc>
                 <lastmod>2025-07-11T16:55:00+03:00</lastmod>
             </url>
@@ -400,13 +405,13 @@
             </url>
         
             <url>
-                <loc>https://vijups.eu/posts/pattern-map/</loc>
-                <lastmod>2025-07-09T17:15:00+03:00</lastmod>
+                <loc>https://vijups.eu/posts/masterpost/</loc>
+                <lastmod>2025-07-09T17:50:00+03:00</lastmod>
             </url>
         
             <url>
-                <loc>https://vijups.eu/posts/masterpost/</loc>
-                <lastmod>2025-07-09T13:50:00+03:00</lastmod>
+                <loc>https://vijups.eu/posts/pattern-map/</loc>
+                <lastmod>2025-07-09T17:15:00+03:00</lastmod>
             </url>
         
             <url>
@@ -418,17 +423,17 @@
         
             <url>
                 <loc>https://vijups.eu/about/</loc>
-                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
+                <lastmod>2025-07-12T18:05:10+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/categories/</loc>
-                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
+                <lastmod>2025-07-12T18:05:10+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/tags/</loc>
-                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
+                <lastmod>2025-07-12T18:05:10+03:00</lastmod>
             </url>
         
     
@@ -680,28 +685,6 @@
             
             
                 <url>
-                    <loc>https://vijups.eu/lv/tags/zpd/</loc>
-                    
-                </url>
-            
-        
-    
-        
-        
-            
-            
-                <url>
-                    <loc>https://vijups.eu/lv/tags/competitive-programming/</loc>
-                    
-                </url>
-            
-        
-    
-        
-        
-            
-            
-                <url>
                     <loc>https://vijups.eu/lv/tags/python/</loc>
                     
                 </url>
@@ -736,6 +719,28 @@
             
                 <url>
                     <loc>https://vijups.eu/lv/tags/geopandas/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
+                    <loc>https://vijups.eu/lv/tags/zpd/</loc>
+                    
+                </url>
+            
+        
+    
+        
+        
+            
+            
+                <url>
+                    <loc>https://vijups.eu/lv/tags/competitive-programming/</loc>
                     
                 </url>
             
@@ -790,7 +795,7 @@
             
             
                 <url>
-                    <loc>https://vijups.eu/lv/categories/personal/</loc>
+                    <loc>https://vijups.eu/lv/categories/programming/</loc>
                     
                 </url>
             
@@ -801,7 +806,7 @@
             
             
                 <url>
-                    <loc>https://vijups.eu/lv/categories/programming/</loc>
+                    <loc>https://vijups.eu/lv/categories/personal/</loc>
                     
                 </url>
             
@@ -823,6 +828,11 @@
     
         
             <url>
+                <loc>https://vijups.eu/lv/posts/simson-line/</loc>
+                <lastmod>2025-07-12T13:55:00+03:00</lastmod>
+            </url>
+        
+            <url>
                 <loc>https://vijups.eu/lv/posts/cauchy-inequality/</loc>
                 <lastmod>2025-07-11T16:55:00+03:00</lastmod>
             </url>
@@ -833,13 +843,13 @@
             </url>
         
             <url>
-                <loc>https://vijups.eu/lv/posts/pattern-map/</loc>
-                <lastmod>2025-07-09T17:15:00+03:00</lastmod>
+                <loc>https://vijups.eu/lv/posts/masterpost/</loc>
+                <lastmod>2025-07-09T17:50:00+03:00</lastmod>
             </url>
         
             <url>
-                <loc>https://vijups.eu/lv/posts/masterpost/</loc>
-                <lastmod>2025-07-09T13:50:00+03:00</lastmod>
+                <loc>https://vijups.eu/lv/posts/pattern-map/</loc>
+                <lastmod>2025-07-09T17:15:00+03:00</lastmod>
             </url>
         
             <url>
@@ -851,17 +861,17 @@
         
             <url>
                 <loc>https://vijups.eu/lv/about/</loc>
-                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
+                <lastmod>2025-07-12T18:05:10+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/lv/categories/</loc>
-                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
+                <lastmod>2025-07-12T18:05:10+03:00</lastmod>
             </url>
         
             <url>
                 <loc>https://vijups.eu/lv/tags/</loc>
-                <lastmod>2025-07-11T17:17:51+03:00</lastmod>
+                <lastmod>2025-07-12T18:05:10+03:00</lastmod>
             </url>
         
     

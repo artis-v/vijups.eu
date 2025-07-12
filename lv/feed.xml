@@ -4,7 +4,7 @@
   <id>https://vijups.eu/</id>
   <title>Artis Vijups</title>
   <subtitle>Personal website of Artis Vijups, mathematician and programmer.</subtitle>
-  <updated>2025-07-11T17:17:52+03:00</updated>
+  <updated>2025-07-12T18:05:27+03:00</updated>
   <author>
     <name>Artis Vijups</name>
     <uri>https://vijups.eu/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Simsona taisne priekš olimpiādēm</title>
+    <link href="https://vijups.eu/lv/posts/simson-line/" rel="alternate" type="text/html" title="Simsona taisne priekš olimpiādēm" />
+    <published>2025-07-12T13:55:00+03:00</published>
+  
+    <updated>2025-07-12T13:55:00+03:00</updated>
+  
+    <id>https://vijups.eu/posts/simson-line/</id>
+    <content type="text/html" src="https://vijups.eu/posts/simson-line/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Matemātika" />
+    
+    <category term="Matemātika olimpiādēm" />
+    
+  
+
+  <summary>Kas ir Simsona taisne, kā arī saistīts Atklātās matemātikas olimpiādes uzdevums</summary>
+
+  </entry>
 
   
   <entry>
@@ -72,35 +98,11 @@
 
   
   <entry>
-    <title>Kā uztaisīt labāku novadu karti</title>
-    <link href="https://vijups.eu/lv/posts/pattern-map/" rel="alternate" type="text/html" title="Kā uztaisīt labāku novadu karti" />
-    <published>2025-07-09T17:15:00+03:00</published>
+    <title>Pārskats - iepriekšējos gados izveidoti darbi</title>
+    <link href="https://vijups.eu/lv/posts/masterpost/" rel="alternate" type="text/html" title="Pārskats - iepriekšējos gados izveidoti darbi" />
+    <published>2025-07-09T17:50:00+03:00</published>
   
-    <updated>2025-07-09T17:15:00+03:00</updated>
-  
-    <id>https://vijups.eu/posts/pattern-map/</id>
-    <content type="text/html" src="https://vijups.eu/posts/pattern-map/" />
-    <author>
-      <name>Artis Vijups</name>
-    </author>
-
-  
-    
-    <category term="Programmēšana" />
-    
-  
-
-  <summary>Jo LSM karte bija diezgan sāpīga</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Pārskata raksts - iepriekšējos gados izveidoti darbi</title>
-    <link href="https://vijups.eu/lv/posts/masterpost/" rel="alternate" type="text/html" title="Pārskata raksts - iepriekšējos gados izveidoti darbi" />
-    <published>2025-07-09T13:50:00+03:00</published>
-  
-    <updated>2025-07-09T13:50:00+03:00</updated>
+    <updated>2025-07-09T17:50:00+03:00</updated>
   
     <id>https://vijups.eu/posts/masterpost/</id>
     <content type="text/html" src="https://vijups.eu/posts/masterpost/" />
@@ -120,25 +122,25 @@
 
   
   <entry>
-    <title>Raksts angliski - why pi is not a repeating decimal</title>
-    <link href="https://vijups.eu/lv/posts/pi/" rel="alternate" type="text/html" title="Raksts angliski - why pi is not a repeating decimal" />
-    <published>2023-12-20T07:37:00+02:00</published>
+    <title>Kā uztaisīt labāku novadu karti</title>
+    <link href="https://vijups.eu/lv/posts/pattern-map/" rel="alternate" type="text/html" title="Kā uztaisīt labāku novadu karti" />
+    <published>2025-07-09T17:15:00+03:00</published>
   
-    <updated>2025-07-08T21:59:00+03:00</updated>
+    <updated>2025-07-09T17:15:00+03:00</updated>
   
-    <id>https://vijups.eu/posts/pi/</id>
-    <content type="text/html" src="https://vijups.eu/posts/pi/" />
+    <id>https://vijups.eu/posts/pattern-map/</id>
+    <content type="text/html" src="https://vijups.eu/posts/pattern-map/" />
     <author>
       <name>Artis Vijups</name>
     </author>
 
   
     
-    <category term="Matemātika" />
+    <category term="Programmēšana" />
     
   
 
-  <summary>An accessible journey through Lambert&amp;#39;s proof</summary>
+  <summary>Jo LSM karte bija diezgan sāpīga</summary>
 
   </entry>
 

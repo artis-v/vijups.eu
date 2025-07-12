@@ -1,5 +1,13 @@
 [
   {
+    "title": "Simsona taisne priekš olimpiādēm",
+    "url": "/posts/simson-line/",
+    "categories": "Matemātika, Matemātika olimpiādēm",
+    "tags": "zpd, ģeometrija",
+    "date": "2025-07-12 13:55:00 +0300",
+    "content": "Kas ir Simsona taisne, kā arī saistīts Atklātās matemātikas olimpiādes uzdevums"
+  },
+  {
     "title": "Košī nevienādība priekš olimpiādēm",
     "url": "/posts/cauchy-inequality/",
     "categories": "Matemātika, Matemātika olimpiādēm",
@@ -16,20 +24,20 @@
     "content": "Ieskats racionālo sakņu teorēmā, polinomu dalīšanā un Atklātās matemātikas olimpiādes uzdevumos"
   },
   {
+    "title": "Pārskats - iepriekšējos gados izveidoti darbi",
+    "url": "/posts/masterpost/",
+    "categories": "Personīgie",
+    "tags": "zpd, sacensību programmēšana",
+    "date": "2025-07-09 17:50:00 +0300",
+    "content": "Uzdevumu komplekti un mācību materiāli, kā arī citas lietas"
+  },
+  {
     "title": "Kā uztaisīt labāku novadu karti",
     "url": "/posts/pattern-map/",
     "categories": "Programmēšana",
     "tags": "python, javascript, leaflet, geopandas",
     "date": "2025-07-09 17:15:00 +0300",
     "content": "Jo LSM karte bija diezgan sāpīga"
-  },
-  {
-    "title": "Pārskata raksts - iepriekšējos gados izveidoti darbi",
-    "url": "/posts/masterpost/",
-    "categories": "Personīgie",
-    "tags": "zpd, sacensību programmēšana",
-    "date": "2025-07-09 13:50:00 +0300",
-    "content": "Uzdevumu komplekti un mācību materiāli, kā arī citas lietas"
   },
   {
     "title": "Raksts angliski - why pi is not a repeating decimal",

@@ -1,5 +1,13 @@
 [
   {
+    "title": "Simson line for olympiads",
+    "url": "/posts/simson-line/",
+    "categories": "Mathematics, Competition mathematics",
+    "tags": "zpd, geometry",
+    "date": "2025-07-12 13:55:00 +0300",
+    "content": "What is the Simson line, and a relevant Latvian Open Mathematics Olympiad problem"
+  },
+  {
     "title": "Cauchy's inequality for olympiads",
     "url": "/posts/cauchy-inequality/",
     "categories": "Mathematics, Competition mathematics",
@@ -16,20 +24,20 @@
     "content": "A look at the rational root theorem, polynomial division, and problems from the Latvian Open Mathematics Olympiad"
   },
   {
+    "title": "Masterpost - collection of select works from previous years",
+    "url": "/posts/masterpost/",
+    "categories": "Personal",
+    "tags": "zpd, competitive programming",
+    "date": "2025-07-09 17:50:00 +0300",
+    "content": "Problemsets and study materials, among other things"
+  },
+  {
     "title": "How to make a better map of regions",
     "url": "/posts/pattern-map/",
     "categories": "Programming",
     "tags": "python, javascript, leaflet, geopandas",
     "date": "2025-07-09 17:15:00 +0300",
     "content": "Because the one from LSM is painful to look at"
-  },
-  {
-    "title": "Masterpost - collection of select works from previous years",
-    "url": "/posts/masterpost/",
-    "categories": "Personal",
-    "tags": "zpd, competitive programming",
-    "date": "2025-07-09 13:50:00 +0300",
-    "content": "Problemsets and study materials, among other things"
   },
   {
     "title": "Why pi is not a repeating decimal",
