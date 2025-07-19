@@ -4,7 +4,7 @@
   <id>https://vijups.eu/</id>
   <title>Artis Vijups</title>
   <subtitle>Personal website of Artis Vijups, mathematician and programmer.</subtitle>
-  <updated>2025-07-12T18:05:27+03:00</updated>
+  <updated>2025-07-19T16:35:56+03:00</updated>
   <author>
     <name>Artis Vijups</name>
     <uri>https://vijups.eu/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Faulhabera formula priekš olimpiādēm</title>
+    <link href="https://vijups.eu/lv/posts/faulhaber/" rel="alternate" type="text/html" title="Faulhabera formula priekš olimpiādēm" />
+    <published>2025-07-18T18:10:00+03:00</published>
+  
+    <updated>2025-07-18T18:10:00+03:00</updated>
+  
+    <id>https://vijups.eu/posts/faulhaber/</id>
+    <content type="text/html" src="https://vijups.eu/posts/faulhaber/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Matemātika" />
+    
+    <category term="Matemātika olimpiādēm" />
+    
+  
+
+  <summary>Kas ir Faulhabera formula, kādi ir tās nozīmīgākie rezultāti, un saistīti Atklātās matemātikas olimpiādes uzdevumi</summary>
+
+  </entry>
 
   
   <entry>
@@ -117,30 +143,6 @@
   
 
   <summary>Uzdevumu komplekti un mācību materiāli, kā arī citas lietas</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Kā uztaisīt labāku novadu karti</title>
-    <link href="https://vijups.eu/lv/posts/pattern-map/" rel="alternate" type="text/html" title="Kā uztaisīt labāku novadu karti" />
-    <published>2025-07-09T17:15:00+03:00</published>
-  
-    <updated>2025-07-09T17:15:00+03:00</updated>
-  
-    <id>https://vijups.eu/posts/pattern-map/</id>
-    <content type="text/html" src="https://vijups.eu/posts/pattern-map/" />
-    <author>
-      <name>Artis Vijups</name>
-    </author>
-
-  
-    
-    <category term="Programmēšana" />
-    
-  
-
-  <summary>Jo LSM karte bija diezgan sāpīga</summary>
 
   </entry>
 

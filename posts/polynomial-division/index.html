@@ -805,7 +805,7 @@ function changeLang(url) {
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="709 words"
+  title="714 words"
 >
   <em>3 min</em> read</span>
 
@@ -840,7 +840,7 @@ function changeLang(url) {
 
   <div class="content">
     <blockquote class="prompt-info">
-  <p>This is part of a series of articles based on <a href="/zpd.pdf">my high school research paper from 2021</a>. The problems from the Latvian Open Mathematics Olympiad mentioned in the article can be found in the <a href="https://www.nms.lu.lv/arhivs-un-materali/uzdevumu-arhivs/olimpiazu-uzdevumu-arhivs/">LU NMS archive</a>.</p>
+  <p>This is part of a series of articles based on <a href="/zpd.pdf">my high school research paper from 2021</a> covering nonstandard approaches to solving olympiad problems. The problems from the Latvian Open Mathematics Olympiad mentioned in the article can be found in the <a href="https://www.nms.lu.lv/arhivs-un-materali/uzdevumu-arhivs/olimpiazu-uzdevumu-arhivs/">LU NMS archive</a>.</p>
 </blockquote>
 
 <p>As is well known, expressions like $x^2-7x+10$ and $2x^2+8x+6$ can be factored by first finding their roots. The roots of these two expressions are $\{2,5\}$ and $\{-3,-1\}$, respectively, so they can be rewritten as $(x-2)(x-5)$ and $2(x+3)(x+1).$</p>
@@ -892,16 +892,16 @@ We can evaluate $3x^3-4x^2-5x+2$ for each of these values of $x$ and discover th
 
 <h2 id="olympiad-examples"><span class="me-2">Olympiad examples</span><a href="#olympiad-examples" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<blockquote>
-  <p>The roots of the equation $x^3-44x^2+623x-2860=0$ are the side lengths of a triangle. Calculate the area of this triangle! <small><em>- Latvian Open Mathematics Olympiad 2017/2018, Form 11, Problem 5.</em></small></p>
+<blockquote class="prompt-task">
+  <p><small>Latvian Open Mathematics Olympiad 2017/2018, Form 11, Problem 5.</small><br /> The roots of the equation $x^3-44x^2+623x-2860=0$ are the side lengths of a triangle. Calculate the area of this triangle!</p>
 </blockquote>
 
 <p>In this problem, we can use the Rational Root Theorem to find all three roots. It’s easier to find one root and then divide the polynomial, since we could find the remaining two sides using Vieta’s formulas.</p>
 
 <p>In both cases, we find the side lengths to be $11,13,20$. Then the area of the triangle, which is $66$, can be quickly found using Heron’s formula: \[\text{area}=\sqrt{p(p-a)(p-b)(p-c)},\quad\text{where}~~p=\frac{a+b+c}{2}.\]</p>
 
-<blockquote>
-  <p>Solve in natural numbers the equation $x^3+(x+1)^3=(x+3)^3+1$. <small><em>- Latvian Open Mathematics Olympiad 2016/2017, Form 9, Problem 5.</em></small></p>
+<blockquote class="prompt-task">
+  <p><small>Latvian Open Mathematics Olympiad 2016/2017, Form 9, Problem 5.</small><br /> Solve in natural numbers the equation $x^3+(x+1)^3=(x+3)^3+1$.</p>
 </blockquote>
 
 <p>Here you can expand all the parentheses to get $x^3-6x^2-24x-27=0$. According to the Rational Root Theorem, the only natural numbers that could be solutions are $1,3,9,27$, and among them, only $9$ is a root.</p>
@@ -1060,6 +1060,13 @@ We can evaluate $3x^3-4x^2-5x+2$ for each of these values of $x$ and discover th
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/faulhaber/">Faulhaber's formula for olympiads</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/simson-line/">Simson line for olympiads</a>
         </li>
       
@@ -1082,13 +1089,6 @@ We can evaluate $3x^3-4x^2-5x+2$ for each of these values of $x$ and discover th
         
         <li class="text-truncate lh-lg">
           <a href="/posts/masterpost/">Masterpost - collection of select works from previous years</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/pattern-map/">How to make a better map of regions</a>
         </li>
       
     </ul>
@@ -1194,8 +1194,6 @@ We can evaluate $3x^3-4x^2-5x+2$ for each of these values of $x$ and discover th
     
     
     
-    
-      
     
   
     
@@ -1629,6 +1627,18 @@ We can evaluate $3x^3-4x^2-5x+2$ for each of these values of $x$ and discover th
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -1642,6 +1652,34 @@ We can evaluate $3x^3-4x^2-5x+2$ for each of these values of $x$ and discover th
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/faulhaber/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1752851400"
+  data-df="ll"
+  
+>
+  Jul 18, 2025
+</time>
+
+              <h4 class="pt-0 my-2">Faulhaber's formula for olympiads</h4>
+              <div class="text-muted">
+                <p>Introducing Faulhaber&#39;s formula and its consequent results, with problems from the Latvian Open Mathematics Olympiad</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/cauchy-inequality/" class="post-preview card h-100">
@@ -1694,34 +1732,6 @@ We can evaluate $3x^3-4x^2-5x+2$ for each of these values of $x$ and discover th
               <h4 class="pt-0 my-2">Simson line for olympiads</h4>
               <div class="text-muted">
                 <p>What is the Simson line, and a relevant Latvian Open Mathematics Olympiad problem</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/masterpost/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1752072600"
-  data-df="ll"
-  
->
-  Jul  9, 2025
-</time>
-
-              <h4 class="pt-0 my-2">Masterpost - collection of select works from previous years</h4>
-              <div class="text-muted">
-                <p>Problemsets and study materials, among other things</p>
               </div>
             </div>
           </a>
@@ -1905,8 +1915,6 @@ We can evaluate $3x^3-4x^2-5x+2$ for each of these values of $x$ and discover th
     
     
     
-    
-      
     
   
     

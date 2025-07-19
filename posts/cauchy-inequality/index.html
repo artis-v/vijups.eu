@@ -794,7 +794,7 @@ function changeLang(url) {
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="504 words"
+  title="510 words"
 >
   <em>2 min</em> read</span>
 
@@ -829,7 +829,7 @@ function changeLang(url) {
 
   <div class="content">
     <blockquote class="prompt-info">
-  <p>This is part of a series of articles based on <a href="/zpd.pdf">my high school research paper from 2021</a>. The problems from the Latvian Open Mathematics Olympiad mentioned in the article can be found in the <a href="https://www.nms.lu.lv/arhivs-un-materali/uzdevumu-arhivs/olimpiazu-uzdevumu-arhivs/">LU NMS archive</a>.</p>
+  <p>This is part of a series of articles based on <a href="/zpd.pdf">my high school research paper from 2021</a> covering nonstandard approaches to solving olympiad problems. The problems from the Latvian Open Mathematics Olympiad mentioned in the article can be found in the <a href="https://www.nms.lu.lv/arhivs-un-materali/uzdevumu-arhivs/olimpiazu-uzdevumu-arhivs/">LU NMS archive</a>.</p>
 </blockquote>
 
 <p>Problems where we have to either figure out the minimum or maximum value of an expression, or ones where inequalities are involved in some other way, are common in olympiads. Once helpful inequality at the Latvian Open Mathematics Olympiad, which the absolute majority of contests certainly do not even know, is Cauchy’s inequality.</p>
@@ -848,8 +848,8 @@ function changeLang(url) {
 
 <h2 id="olympiad-examples"><span class="me-2">Olympiad examples</span><a href="#olympiad-examples" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<blockquote>
-  <p>Prove that, for any positive numbers $a$ and $b\,$ we have $(\tfrac{3a}{b}+1)(\tfrac{3b}{a}+1)\geq16$. <small><em>- Latvian Open Mathematics Olympiad 2016/2017, Form 10, Problem 2.</em></small></p>
+<blockquote class="prompt-task">
+  <p><small>Latvian Open Mathematics Olympiad 2016/2017, Form 10, Problem 2.</small><br /> Prove that, for any positive numbers $a$ and $b\,$ we have $(\tfrac{3a}{b}+1)(\tfrac{3b}{a}+1)\geq16$.</p>
 </blockquote>
 
 <blockquote class="prompt-think">
@@ -860,8 +860,8 @@ function changeLang(url) {
 \[(\tfrac{3a}{b}+1)(\tfrac{3b}{a}+1)\geq(\sqrt{\tfrac{3a}{b}}\cdot\sqrt{\tfrac{3b}{a}}+1\cdot1)^2.\]
 Since \[\sqrt{\tfrac{3a}{b}}\cdot\sqrt{\tfrac{3b}{a}}+1\cdot1=\sqrt{\tfrac{3\cancel a}{\cancel b}\cdot\tfrac{3\cancel b}{\cancel a}}+1=\sqrt{9}+1=4,\] the right side evaluates to $4^2=16$, hence we have shown the inequality.</p>
 
-<blockquote>
-  <p>Given four positive numbers $a_1,a_2,a_3$ and $a_4$ such that $a_1a_3=a_2a_4=2017$, what is the smallest possible value of $(a_1+a_2)(a_3+a_4)$? <small><em>- Latvian Open Mathematics Olympiad 2016/2017, Form 11, Problem 2.</em></small></p>
+<blockquote class="prompt-task">
+  <p><small>Latvian Open Mathematics Olympiad 2016/2017, Form 11, Problem 2.</small><br /> Given four positive numbers $a_1,a_2,a_3$ and $a_4$ such that $a_1a_3=a_2a_4=2017$, what is the smallest possible value of $(a_1+a_2)(a_3+a_4)$?</p>
 </blockquote>
 
 <p>Substituting \[r_1=\sqrt{a_1},\quad r_2=\sqrt{a_2},\quad s_1=\sqrt{a_3},\quad s_2=\sqrt{a_4}\] into Cauchy’s inequality gives
@@ -874,8 +874,8 @@ Since \[\sqrt{\tfrac{3a}{b}}\cdot\sqrt{\tfrac{3b}{a}}+1\cdot1=\sqrt{\tfrac{3\can
 \end{aligned}
 The value $8068$ is achieved, for instance, when $a_1=a_3=2017$ and $a_2=a_4=1$, therefore it is the smallest possible value.</p>
 
-<blockquote>
-  <p>Prove that $\tfrac1a+\tfrac4b+\tfrac{16}c\geq\tfrac{49}{a+b+c}$ if $a,b,c$ are positive numbers! <small><em>- Latvian Open Mathematics Olympiad 2016/2017, Form 12, Problem 2.</em></small></p>
+<blockquote class="prompt-task">
+  <p><small>Latvian Open Mathematics Olympiad 2016/2017, Form 12, Problem 2.</small><br /> Prove that $\tfrac1a+\tfrac4b+\tfrac{16}c\geq\tfrac{49}{a+b+c}$ if $a,b\,$ and $c$ are positive numbers!</p>
 </blockquote>
 
 <blockquote class="prompt-think">
@@ -1041,6 +1041,13 @@ The value $8068$ is achieved, for instance, when $a_1=a_3=2017$ and $a_2=a_4=1$,
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/faulhaber/">Faulhaber's formula for olympiads</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/simson-line/">Simson line for olympiads</a>
         </li>
       
@@ -1063,13 +1070,6 @@ The value $8068$ is achieved, for instance, when $a_1=a_3=2017$ and $a_2=a_4=1$,
         
         <li class="text-truncate lh-lg">
           <a href="/posts/masterpost/">Masterpost - collection of select works from previous years</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/pattern-map/">How to make a better map of regions</a>
         </li>
       
     </ul>
@@ -1175,8 +1175,6 @@ The value $8068$ is achieved, for instance, when $a_1=a_3=2017$ and $a_2=a_4=1$,
     
     
     
-    
-      
     
   
     
@@ -1610,6 +1608,18 @@ The value $8068$ is achieved, for instance, when $a_1=a_3=2017$ and $a_2=a_4=1$,
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -1623,6 +1633,34 @@ The value $8068$ is achieved, for instance, when $a_1=a_3=2017$ and $a_2=a_4=1$,
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/faulhaber/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1752851400"
+  data-df="ll"
+  
+>
+  Jul 18, 2025
+</time>
+
+              <h4 class="pt-0 my-2">Faulhaber's formula for olympiads</h4>
+              <div class="text-muted">
+                <p>Introducing Faulhaber&#39;s formula and its consequent results, with problems from the Latvian Open Mathematics Olympiad</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/polynomial-division/" class="post-preview card h-100">
@@ -1675,34 +1713,6 @@ The value $8068$ is achieved, for instance, when $a_1=a_3=2017$ and $a_2=a_4=1$,
               <h4 class="pt-0 my-2">Simson line for olympiads</h4>
               <div class="text-muted">
                 <p>What is the Simson line, and a relevant Latvian Open Mathematics Olympiad problem</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/masterpost/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1752072600"
-  data-df="ll"
-  
->
-  Jul  9, 2025
-</time>
-
-              <h4 class="pt-0 my-2">Masterpost - collection of select works from previous years</h4>
-              <div class="text-muted">
-                <p>Problemsets and study materials, among other things</p>
               </div>
             </div>
           </a>
@@ -1886,8 +1896,6 @@ The value $8068$ is achieved, for instance, when $a_1=a_3=2017$ and $a_2=a_4=1$,
     
     
     
-    
-      
     
   
     

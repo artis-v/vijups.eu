@@ -4,7 +4,7 @@
   <id>https://vijups.eu/</id>
   <title>Artis Vijups</title>
   <subtitle>Personal website of Artis Vijups, mathematician and programmer.</subtitle>
-  <updated>2025-07-12T18:05:10+03:00</updated>
+  <updated>2025-07-19T16:35:54+03:00</updated>
   <author>
     <name>Artis Vijups</name>
     <uri>https://vijups.eu/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Faulhaber's formula for olympiads</title>
+    <link href="https://vijups.eu/posts/faulhaber/" rel="alternate" type="text/html" title="Faulhaber&amp;apos;s formula for olympiads" />
+    <published>2025-07-18T18:10:00+03:00</published>
+  
+    <updated>2025-07-18T18:10:00+03:00</updated>
+  
+    <id>https://vijups.eu/posts/faulhaber/</id>
+    <content type="text/html" src="https://vijups.eu/posts/faulhaber/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Mathematics" />
+    
+    <category term="Competition mathematics" />
+    
+  
+
+  <summary>Introducing Faulhaber&amp;#39;s formula and its consequent results, with problems from the Latvian Open Mathematics Olympiad</summary>
+
+  </entry>
 
   
   <entry>
@@ -117,30 +143,6 @@
   
 
   <summary>Problemsets and study materials, among other things</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>How to make a better map of regions</title>
-    <link href="https://vijups.eu/posts/pattern-map/" rel="alternate" type="text/html" title="How to make a better map of regions" />
-    <published>2025-07-09T17:15:00+03:00</published>
-  
-    <updated>2025-07-09T17:15:00+03:00</updated>
-  
-    <id>https://vijups.eu/posts/pattern-map/</id>
-    <content type="text/html" src="https://vijups.eu/posts/pattern-map/" />
-    <author>
-      <name>Artis Vijups</name>
-    </author>
-
-  
-    
-    <category term="Programming" />
-    
-  
-
-  <summary>Because the one from LSM is painful to look at</summary>
 
   </entry>
 

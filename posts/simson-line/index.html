@@ -800,7 +800,7 @@ function changeLang(url) {
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="373 words"
+  title="379 words"
 >
   <em>2 min</em> read</span>
 
@@ -835,7 +835,7 @@ function changeLang(url) {
 
   <div class="content">
     <blockquote class="prompt-info">
-  <p>This is part of a series of articles based on <a href="/zpd.pdf">my high school research paper from 2021</a>. The problems from the Latvian Open Mathematics Olympiad mentioned in the article can be found in the <a href="https://www.nms.lu.lv/arhivs-un-materali/uzdevumu-arhivs/olimpiazu-uzdevumu-arhivs/">LU NMS archive</a>.</p>
+  <p>This is part of a series of articles based on <a href="/zpd.pdf">my high school research paper from 2021</a> covering nonstandard approaches to solving olympiad problems. The problems from the Latvian Open Mathematics Olympiad mentioned in the article can be found in the <a href="https://www.nms.lu.lv/arhivs-un-materali/uzdevumu-arhivs/olimpiazu-uzdevumu-arhivs/">LU NMS archive</a>.</p>
 </blockquote>
 
 <p>Let’s get to know a fairly rare, but certainly elegant theorem from geometry: the Simson line.</p>
@@ -854,8 +854,8 @@ function changeLang(url) {
 
 <h2 id="olympiad-example"><span class="me-2">Olympiad example</span><a href="#olympiad-example" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<blockquote>
-  <p>In triangle $ABC$, the angle bisector of $\angle ABC$ intersects the triangle’s circumcircle in point $D$. Segments $DP$ and $DQ$ are altitudes in triangles $ABD$ and $BCD$ respectively. Prove that the segment $PQ$ bisects $AC$! <small><em>- Latvian Open Mathematics Olympiad 2015/2016, Form 12, Problem 4.</em></small></p>
+<blockquote class="prompt-task">
+  <p><small>Latvian Open Mathematics Olympiad 2015/2016, Form 12, Problem 4.</small><br /> In triangle $ABC$, the angle bisector of $\angle ABC$ intersects the triangle’s circumcircle in point $D$. Segments $DP$ and $DQ$ are altitudes in triangles $ABD$ and $BCD$ respectively. Prove that the segment $PQ$ bisects $AC$!</p>
 </blockquote>
 
 <p>A static diagram is given below.</p>
@@ -1014,6 +1014,13 @@ function changeLang(url) {
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/faulhaber/">Faulhaber's formula for olympiads</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/simson-line/">Simson line for olympiads</a>
         </li>
       
@@ -1036,13 +1043,6 @@ function changeLang(url) {
         
         <li class="text-truncate lh-lg">
           <a href="/posts/masterpost/">Masterpost - collection of select works from previous years</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/pattern-map/">How to make a better map of regions</a>
         </li>
       
     </ul>
@@ -1148,8 +1148,6 @@ function changeLang(url) {
     
     
     
-    
-      
     
   
     
@@ -1583,6 +1581,18 @@ function changeLang(url) {
 
   
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -1596,6 +1606,34 @@ function changeLang(url) {
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/faulhaber/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1752851400"
+  data-df="ll"
+  
+>
+  Jul 18, 2025
+</time>
+
+              <h4 class="pt-0 my-2">Faulhaber's formula for olympiads</h4>
+              <div class="text-muted">
+                <p>Introducing Faulhaber&#39;s formula and its consequent results, with problems from the Latvian Open Mathematics Olympiad</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/cauchy-inequality/" class="post-preview card h-100">
@@ -1653,34 +1691,6 @@ function changeLang(url) {
           </a>
         </article>
       
-        <article class="col">
-          <a href="/posts/masterpost/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1752072600"
-  data-df="ll"
-  
->
-  Jul  9, 2025
-</time>
-
-              <h4 class="pt-0 my-2">Masterpost - collection of select works from previous years</h4>
-              <div class="text-muted">
-                <p>Problemsets and study materials, among other things</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
     </nav>
   </aside>
   <!-- #related-posts -->
@@ -1705,9 +1715,13 @@ function changeLang(url) {
   
 
   
-    <div class="btn btn-outline-primary disabled" aria-label="Newer">
-      <p>-</p>
-    </div>
+    <a
+      href="/posts/faulhaber/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>Faulhaber's formula for olympiads</p>
+    </a>
   
 </nav>
 
@@ -1855,8 +1869,6 @@ function changeLang(url) {
     
     
     
-    
-      
     
   
     
