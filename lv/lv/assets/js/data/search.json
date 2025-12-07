@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Ievads - uzdevumi",
+    "url": "/posts/uzdevumi/",
+    "categories": "Programmēšana, Sacensību programmēšana, Ievads",
+    "tags": "c++",
+    "date": "2025-07-18 18:10:00 +0300",
+    "content": "Uzdevums #1       Dāvana no Ļenas              Codeforces 118B         Sarežģītība 1000          Iesniegt risinājumu   Drīz Vasjam būs dzimšanas diena, un Ļena ir izlēmusi kā dāvanu uzšūt viņam lak..."
+  },
+  {
+    "title": "Faulhaber's formula for olympiads",
+    "url": "/posts/faulhaber/",
+    "categories": "Mathematics, Competition mathematics",
+    "tags": "zpd, algebra",
+    "date": "2025-07-18 18:10:00 +0300",
+    "content": "Introducing Faulhaber&#39;s formula and its consequent results, with problems from the Latvian Open Mathematics Olympiad"
+  },
+  {
+    "title": "Simson line for olympiads",
+    "url": "/posts/simson-line/",
+    "categories": "Mathematics, Competition mathematics",
+    "tags": "zpd, geometry",
+    "date": "2025-07-12 13:55:00 +0300",
+    "content": "What is the Simson line, and a relevant Latvian Open Mathematics Olympiad problem"
+  },
+  {
+    "title": "Cauchy's inequality for olympiads",
+    "url": "/posts/cauchy-inequality/",
+    "categories": "Mathematics, Competition mathematics",
+    "tags": "zpd, algebra, inequalities",
+    "date": "2025-07-11 16:55:00 +0300",
+    "content": "A look at Cauchy&#39;s inequality and problems from the Latvian Open Mathematics Olympiad"
+  },
+  {
+    "title": "Polynomial division for olympiads",
+    "url": "/posts/polynomial-division/",
+    "categories": "Mathematics, Competition mathematics",
+    "tags": "zpd, algebra, polynomials",
+    "date": "2025-07-11 00:55:00 +0300",
+    "content": "A look at the rational root theorem, polynomial division, and problems from the Latvian Open Mathematics Olympiad"
+  },
+  {
+    "title": "Masterpost - collection of select works from previous years",
+    "url": "/posts/masterpost/",
+    "categories": "Personal",
+    "tags": "zpd, competitive programming",
+    "date": "2025-07-09 17:50:00 +0300",
+    "content": "Problemsets and study materials, among other things"
+  },
+  {
+    "title": "How to make a better map of regions",
+    "url": "/posts/pattern-map/",
+    "categories": "Programming",
+    "tags": "python, javascript, leaflet, geopandas",
+    "date": "2025-07-09 17:15:00 +0300",
+    "content": "Because the one from LSM is painful to look at"
+  },
+  {
+    "title": "Why pi is not a repeating decimal",
+    "url": "/posts/pi/",
+    "categories": "Mathematics",
+    "tags": "aops, geometry, trigonometry, infinite series",
+    "date": "2023-12-20 07:37:00 +0200",
+    "content": "An accessible journey through Lambert&#39;s proof"
+  }
+  
+]
+

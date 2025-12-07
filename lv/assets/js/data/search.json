@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Trīs teorēmas no skaitļu teorijas priekš olimpiādēm",
+    "url": "/posts/number-theory-trio/",
+    "categories": "Matemātika, Matemātika olimpiādēm",
+    "tags": "zpd, skaitļu teorija",
+    "date": "2025-12-06 12:15:00 +0200",
+    "content": "Divu kvadrātu teorēma, Eilera teorēma un Ležandra formula kopā ar Atklātās matemātikas olimpiādes uzdevumiem"
+  },
+  {
+    "title": "Ptolemaja teorēma priekš olimpiādēm",
+    "url": "/posts/ptolemy/",
+    "categories": "Matemātika, Matemātika olimpiādēm",
+    "tags": "zpd, ģeometrija",
+    "date": "2025-12-05 14:55:00 +0200",
+    "content": "Kas ir Ptolemaja teorēma, un saistīts Atklātās matemātikas olimpiādes uzdevums"
+  },
+  {
+    "title": "Faulhabera formula priekš olimpiādēm",
+    "url": "/posts/faulhaber/",
+    "categories": "Matemātika, Matemātika olimpiādēm",
+    "tags": "zpd, algebra",
+    "date": "2025-07-18 18:10:00 +0300",
+    "content": "Kas ir Faulhabera formula, kādi ir tās nozīmīgākie rezultāti, un saistīti Atklātās matemātikas olimpiādes uzdevumi"
+  },
+  {
+    "title": "Simsona taisne priekš olimpiādēm",
+    "url": "/posts/simson-line/",
+    "categories": "Matemātika, Matemātika olimpiādēm",
+    "tags": "zpd, ģeometrija",
+    "date": "2025-07-12 13:55:00 +0300",
+    "content": "Kas ir Simsona taisne, kā arī saistīts Atklātās matemātikas olimpiādes uzdevums"
+  },
+  {
+    "title": "Košī nevienādība priekš olimpiādēm",
+    "url": "/posts/cauchy-inequality/",
+    "categories": "Matemātika, Matemātika olimpiādēm",
+    "tags": "zpd, algebra, nevienādības",
+    "date": "2025-07-11 16:55:00 +0300",
+    "content": "Ieskats Košī nevienādībā un Atklātās matemātikas olimpiādes uzdevumos"
+  },
+  {
+    "title": "Polinoma dalīšana ar binomu priekš olimpiādēm",
+    "url": "/posts/polynomial-division/",
+    "categories": "Matemātika, Matemātika olimpiādēm",
+    "tags": "zpd, algebra, polinomi",
+    "date": "2025-07-11 00:55:00 +0300",
+    "content": "Ieskats racionālo sakņu teorēmā, polinomu dalīšanā un Atklātās matemātikas olimpiādes uzdevumos"
+  },
+  {
+    "title": "Pārskats - iepriekšējos gados izveidoti darbi",
+    "url": "/posts/masterpost/",
+    "categories": "Personīgie",
+    "tags": "zpd, sacensību programmēšana",
+    "date": "2025-07-09 17:50:00 +0300",
+    "content": "Uzdevumu komplekti un mācību materiāli, kā arī citas lietas"
+  },
+  {
+    "title": "Kā uztaisīt labāku novadu karti",
+    "url": "/posts/pattern-map/",
+    "categories": "Programmēšana",
+    "tags": "python, javascript, leaflet, geopandas",
+    "date": "2025-07-09 17:15:00 +0300",
+    "content": "Jo LSM karte bija diezgan sāpīga"
+  },
+  {
+    "title": "Raksts angliski - why pi is not a repeating decimal",
+    "url": "/posts/pi/",
+    "categories": "Matemātika",
+    "tags": "aops, ģeometrija, trigonometrija, bezgalīgas virknes",
+    "date": "2023-12-20 07:37:00 +0200",
+    "content": "An accessible journey through Lambert&#39;s proof"
+  }
+  
+]
+

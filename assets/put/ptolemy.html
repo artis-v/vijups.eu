@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ptolemy diagram</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+    body { margin: 0; background-color: #102526; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script>
+let A, B, C, D, P, Q, R, O, r;
+
+function setup() {
+  createCanvas(windowWidth, windowWidth * 3 / 5);
+  textFont('Commissioner');
+  textSize(16);
+  updateDiagram();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowWidth * 3 / 5);
+  updateDiagram();
+}
+
+function updateDiagram() {
+  let w = width * 0.6;
+  let h = height * 0.6;
+  let baseAy = height * 0.28;
+  A = createVector((width - w) / 2, baseAy);
+  B = createVector(A.x + w, A.y);
+  D = createVector(A.x, A.y + h);
+  C = createVector(A.x + w, A.y + h);
+  O = createVector(A.x + w * 0.38, A.y + h * 0.18);
+  r = p5.Vector.dist(O, A);
+
+  let contentBottom = max(C.y, O.y + r);
+  let marginBottom = height * 0.04;
+  if (contentBottom < height - marginBottom) {
+    let shift = (height - marginBottom) - contentBottom;
+    A.y += shift;
+    B.y += shift;
+    C.y += shift;
+    D.y += shift;
+    O.y += shift;
+  }
+
+  r = p5.Vector.dist(O, A);
+  P = firstIntersectionOnSegment(circleSegmentIntersections(O, r, A, B));
+  Q = firstIntersectionOnSegment(circleSegmentIntersections(O, r, A, C));
+  R = firstIntersectionOnSegment(circleSegmentIntersections(O, r, A, D));
+  if (!P || !Q || !R) {
+    O = createVector(A.x + w * 0.45, A.y + h * 0.25);
+    r = p5.Vector.dist(O, A);
+    P = firstIntersectionOnSegment(circleSegmentIntersections(O, r, A, B));
+    Q = firstIntersectionOnSegment(circleSegmentIntersections(O, r, A, C));
+    R = firstIntersectionOnSegment(circleSegmentIntersections(O, r, A, D));
+  }
+}
+
+function circleSegmentIntersections(center, radius, A_, B_) {
+  const EPS = 1e-9;
+  let d = p5.Vector.sub(B_, A_);
+  let f = p5.Vector.sub(A_, center);
+  let a = d.dot(d);
+  let b = 2 * f.dot(d);
+  let c = f.dot(f) - radius * radius;
+  let disc = b * b - 4 * a * c;
+  if (disc < -EPS) return [];
+  disc = max(0, disc);
+  let sqrtD = sqrt(disc);
+  let t1 = (-b + sqrtD) / (2 * a);
+  let t2 = (-b - sqrtD) / (2 * a);
+  let sol = [];
+  if (!isNaN(t1)) sol.push({ t: t1, pt: p5.Vector.add(A_, d.copy().mult(t1)) });
+  if (!isNaN(t2) && abs(t2 - t1) > EPS) sol.push({ t: t2, pt: p5.Vector.add(A_, d.copy().mult(t2)) });
+  return sol;
+}
+
+function firstIntersectionOnSegment(candidates) {
+  const TOL = 1e-6;
+  if (!candidates || candidates.length === 0) return null;
+  let onSeg = candidates.filter(c => c.t > TOL && c.t <= 1 + TOL);
+  if (onSeg.length === 0) return null;
+  onSeg.sort((x,y) => x.t - y.t);
+  return onSeg[0].pt;
+}
+
+function draw() {
+  background('#102526');
+  strokeCap(ROUND);
+  strokeJoin(ROUND);
+  drawRectangle();
+  stroke('#88C0D0');
+  strokeWeight(1.5);
+  line(A.x, A.y, C.x, C.y);
+  drawCircle(O, r);
+  drawPoint(A, 'A', '#FFFFFF', -8, -4, true);
+  drawPoint(B, 'B', '#FFFFFF', 15, -4, true);
+  drawPoint(C, 'C', '#FFFFFF', 15, -4, true);
+  drawPoint(D, 'D', '#FFFFFF', -8, -4, true);
+  if (P) drawPoint(P, 'P', '#FF5C5C', 6, -10, false);
+  if (Q) drawPoint(Q, 'Q', '#FF5C5C', 10, 6, false);
+  if (R) drawPoint(R, 'R', '#FF5C5C', -16, 4, false);
+  stroke('#FF5C5C');
+  strokeWeight(2);
+  if (P) line(A.x, A.y, P.x, P.y);
+  if (Q) line(A.x, A.y, Q.x, Q.y);
+  if (R) line(A.x, A.y, R.x, R.y);
+  if (P && Q && R) {
+    stroke('#FF5C5C');
+    strokeWeight(1.5);
+    line(P.x, P.y, Q.x, Q.y);
+    line(Q.x, Q.y, R.x, R.y);
+    line(R.x, R.y, P.x, P.y);
+  }
+}
+
+function drawRectangle() {
+  stroke('#88C0D0');
+  strokeWeight(2);
+  fill('#18343A');
+  quad(A.x, A.y, B.x, B.y, C.x, C.y, D.x, D.y);
+}
+
+function drawCircle(center, radius) {
+  stroke('#44666B');
+  noFill();
+  strokeWeight(1.5);
+  ellipse(center.x, center.y, radius * 2, radius * 2);
+}
+
+function drawPoint(v, label, col = '#FFFFFF', shiftx = 6, shifty = -4, alignRight = false) {
+  fill(col);
+  noStroke();
+  ellipse(v.x, v.y, 6, 6);
+  if (alignRight) textAlign(RIGHT, BOTTOM); else textAlign(LEFT, BOTTOM);
+  text(label, v.x + shiftx, v.y + shifty);
+}
+</script>
+</body>
+</html>

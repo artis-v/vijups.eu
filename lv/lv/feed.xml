@@ -1,0 +1,155 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Artis Vijups</title>
+  <subtitle>Personal website of Artis Vijups, mathematician and programmer.</subtitle>
+  <updated>2025-07-21T03:34:33+03:00</updated>
+  <author>
+    <name>Artis Vijups</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <rights> © 2025 Artis Vijups </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Ievads - uzdevumi</title>
+    <link href="http://localhost:4000/posts/uzdevumi/" rel="alternate" type="text/html" title="Ievads - uzdevumi" />
+    <published>2025-07-18T18:10:00+03:00</published>
+  
+    <updated>2025-07-18T18:10:00+03:00</updated>
+  
+    <id>http://localhost:4000/posts/uzdevumi/</id>
+    <content type="text/html" src="http://localhost:4000/posts/uzdevumi/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Programmēšana" />
+    
+    <category term="Sacensību programmēšana" />
+    
+    <category term="Ievads" />
+    
+  
+
+  <summary>Uzdevums #1       Dāvana no Ļenas              Codeforces 118B         Sarežģītība 1000          Iesniegt risinājumu   Drīz Vasjam būs dzimšanas diena, un Ļena ir izlēmusi kā dāvanu uzšūt viņam lakatiņu. Ļena ir izvēlējusies veidot lakatiņu ar cipariem no $0$ līdz $n$. Šie cipari izveidos rombu. Lielākajam ciparam $n$ vajadzētu atrasties vidū. Cipariem, tuvojoties robežām, vajadzētu sarukt. Pie...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Faulhaber's formula for olympiads</title>
+    <link href="http://localhost:4000/posts/faulhaber/" rel="alternate" type="text/html" title="Faulhaber&amp;apos;s formula for olympiads" />
+    <published>2025-07-18T18:10:00+03:00</published>
+  
+    <updated>2025-07-18T18:10:00+03:00</updated>
+  
+    <id>http://localhost:4000/posts/faulhaber/</id>
+    <content type="text/html" src="http://localhost:4000/posts/faulhaber/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Mathematics" />
+    
+    <category term="Competition mathematics" />
+    
+  
+
+  <summary>Introducing Faulhaber&amp;#39;s formula and its consequent results, with problems from the Latvian Open Mathematics Olympiad</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Simson line for olympiads</title>
+    <link href="http://localhost:4000/posts/simson-line/" rel="alternate" type="text/html" title="Simson line for olympiads" />
+    <published>2025-07-12T13:55:00+03:00</published>
+  
+    <updated>2025-07-12T13:55:00+03:00</updated>
+  
+    <id>http://localhost:4000/posts/simson-line/</id>
+    <content type="text/html" src="http://localhost:4000/posts/simson-line/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Mathematics" />
+    
+    <category term="Competition mathematics" />
+    
+  
+
+  <summary>What is the Simson line, and a relevant Latvian Open Mathematics Olympiad problem</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Cauchy's inequality for olympiads</title>
+    <link href="http://localhost:4000/posts/cauchy-inequality/" rel="alternate" type="text/html" title="Cauchy&amp;apos;s inequality for olympiads" />
+    <published>2025-07-11T16:55:00+03:00</published>
+  
+    <updated>2025-07-11T16:55:00+03:00</updated>
+  
+    <id>http://localhost:4000/posts/cauchy-inequality/</id>
+    <content type="text/html" src="http://localhost:4000/posts/cauchy-inequality/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Mathematics" />
+    
+    <category term="Competition mathematics" />
+    
+  
+
+  <summary>A look at Cauchy&amp;#39;s inequality and problems from the Latvian Open Mathematics Olympiad</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Polynomial division for olympiads</title>
+    <link href="http://localhost:4000/posts/polynomial-division/" rel="alternate" type="text/html" title="Polynomial division for olympiads" />
+    <published>2025-07-11T00:55:00+03:00</published>
+  
+    <updated>2025-07-11T00:55:00+03:00</updated>
+  
+    <id>http://localhost:4000/posts/polynomial-division/</id>
+    <content type="text/html" src="http://localhost:4000/posts/polynomial-division/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Mathematics" />
+    
+    <category term="Competition mathematics" />
+    
+  
+
+  <summary>A look at the rational root theorem, polynomial division, and problems from the Latvian Open Mathematics Olympiad</summary>
+
+  </entry>
+
+</feed>
+
+

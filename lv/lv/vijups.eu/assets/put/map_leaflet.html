@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Pievienojam leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+    * {
+      font-family: 'Commissioner';
+    }
+
+    html, body, #map {
+      height: 65vw;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      background: #102526;
+    }
+    
+    .label-text {
+      width: 100px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-weight: 600;
+      color: white;
+      white-space: nowrap;
+      font-size: 1.2vw;
+      pointer-events: none !important;
+    }
+
+    .leaflet-tooltip.leaflet-tooltip-custom {
+      background-color: rgba(5, 15, 16, 0.9);
+      border-color: #8ba1a2;
+      color: white;
+      padding: 8px 10px;
+      border-radius: 0px;
+      font-family: 'Commissioner', sans-serif;
+      line-height: 1.3;
+      white-space: normal;
+      pointer-events: none;
+      min-width: 150px;
+      max-width: 200px;
+    }
+
+    .custom-tooltip .place-name {
+      font-size: 14pt;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .custom-tooltip .winner-label {
+      font-size: 8pt;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #8ba1a2;
+      margin-bottom: 2px;
+    }
+
+    .custom-tooltip .winner-name {
+      font-size: 10pt;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <!-- Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Download from https://github.com/teastman/Leaflet.pattern/blob/master/dist/leaflet.pattern.js -->
+  <script src="leaflet.pattern.js"></script>
+  <script>
+    fetch('election_data.geojson').then(response => response.json()).then(data => {
+      // Initialize map and disable interactions
+      const map = L.map('map', {
+        zoomSnap: 0,
+        zoomDelta: 0.05,
+        zoomControl: false,
+        dragging: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        keyboard: false,
+        touchZoom: false
+      });
+      const labelOffsets = {
+        "Dienvidkurzemes nov.": [-0.2, -0.1],
+        "Jelgavas nov.": [0, -0.1],
+        "Olaines nov.": [0, -0.045],
+        "Ķekavas nov.": [0.15, 0.01],
+        "Ropažu nov.": [0.1, 0],
+        "Salaspils nov.": [0.15, 0],
+        "Valkas nov.": [0.12, -0.02],
+        "Valmieras nov.": [-0.05, 0.03],
+        "Aizkraukles nov.": [-0.18, 0.07],
+        "Jēkabpils nov.": [-0.17, -0.07],
+        "Preiļu nov.": [0, -0.08],
+        "Augšdaugavas nov.": [0, 0.08],
+        "Ludzas nov.": [0.06, -0.07],
+        "Rēzeknes nov.": [-0.1, 0.15]
+      };
+      const geojsonLayer = L.geoJSON(data, {
+        onEachFeature: function (feature, layer) {
+          // Add municipality with secondary color
+          L.geoJSON(feature, {
+            style: {
+                fillColor: feature.properties.secondaryColor,
+                color: '#050f10',
+                weight: 1,
+                fillOpacity: 1
+            }
+          }).addTo(map);
+
+          // Thick stripes of the first color
+          const pattern = new L.StripePattern({
+            weight: 6,
+            spaceWeight: 6,
+            color: feature.properties.mainColor,
+            opacity: 1,
+            angle: 45
+          });
+          pattern.addTo(map);
+          layer.setStyle({
+            fillPattern: pattern,
+            color: '#050f10',
+            weight: 1,
+            fillOpacity: 1
+          });
+
+          // Hover tooltip showing winner
+          layer.bindTooltip(`
+              <div class="custom-tooltip">
+                <div class="place-name">${feature.properties.LABEL}</div>
+                <div class="winner-label">UZVARĒTĀJS</div>
+                <div class="winner-name">${feature.properties.winner}</div>
+              </div>
+            `, {
+              sticky: true,
+              direction: 'auto',
+              className: 'leaflet-tooltip-custom',
+              permanent: false
+            }
+          );
+        }
+      });
+
+      geojsonLayer.addTo(map);
+      map.fitBounds(geojsonLayer.getBounds(), { padding: [20, 20] }); // Zoom to fit
+      map.touchZoom.disable();
+
+      const mapContainer = document.getElementById('map');
+      const resizeObserver = new ResizeObserver(() => {
+        map.invalidateSize();
+        map.once('moveend zoomend', () => {
+          map.fitBounds(geojsonLayer.getBounds(), { padding: [20, 20] });
+        });
+        map.setView(map.getCenter(), map.getZoom(), { animate: false });
+      });
+      resizeObserver.observe(mapContainer);
+
+      // Wait for map to finish rendering, then add labels
+      map.whenReady(() => {
+        geojsonLayer.eachLayer(layer => {
+          const label = layer.feature.properties.LABEL;
+          const center = layer.getBounds().getCenter();
+          const offset = labelOffsets[label] || [0, 0];
+          const offsetLatLng = {"lat": center["lat"] + offset[1], "lng": center["lng"] + offset[0]};
+
+          L.marker(offsetLatLng, {
+            icon: L.divIcon({
+              className: 'label-text',
+              html: label,
+              iconSize: [100, 20],
+              iconAnchor: [50, 10]
+            }),
+            interactive: false
+          }).addTo(map);
+        });
+      });
+    })      
+  </script>
+</body>
+</html>

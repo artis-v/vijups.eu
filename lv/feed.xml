@@ -1,0 +1,153 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://vijups.eu/</id>
+  <title>Artis Vijups</title>
+  <subtitle>Personal website of Artis Vijups, mathematician and programmer.</subtitle>
+  <updated>2025-12-07T11:45:24+02:00</updated>
+  <author>
+    <name>Artis Vijups</name>
+    <uri>https://vijups.eu/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://vijups.eu/lv/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="https://vijups.eu/lv/"/>
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <rights> © 2025 Artis Vijups </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Trīs teorēmas no skaitļu teorijas priekš olimpiādēm</title>
+    <link href="https://vijups.eu/lv/posts/number-theory-trio/" rel="alternate" type="text/html" title="Trīs teorēmas no skaitļu teorijas priekš olimpiādēm" />
+    <published>2025-12-06T12:15:00+02:00</published>
+  
+    <updated>2025-12-06T12:15:00+02:00</updated>
+  
+    <id>https://vijups.eu/posts/number-theory-trio/</id>
+    <content type="text/html" src="https://vijups.eu/posts/number-theory-trio/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Matemātika" />
+    
+    <category term="Matemātika olimpiādēm" />
+    
+  
+
+  <summary>Divu kvadrātu teorēma, Eilera teorēma un Ležandra formula kopā ar Atklātās matemātikas olimpiādes uzdevumiem</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Ptolemaja teorēma priekš olimpiādēm</title>
+    <link href="https://vijups.eu/lv/posts/ptolemy/" rel="alternate" type="text/html" title="Ptolemaja teorēma priekš olimpiādēm" />
+    <published>2025-12-05T14:55:00+02:00</published>
+  
+    <updated>2025-12-05T14:55:00+02:00</updated>
+  
+    <id>https://vijups.eu/posts/ptolemy/</id>
+    <content type="text/html" src="https://vijups.eu/posts/ptolemy/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Matemātika" />
+    
+    <category term="Matemātika olimpiādēm" />
+    
+  
+
+  <summary>Kas ir Ptolemaja teorēma, un saistīts Atklātās matemātikas olimpiādes uzdevums</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Faulhabera formula priekš olimpiādēm</title>
+    <link href="https://vijups.eu/lv/posts/faulhaber/" rel="alternate" type="text/html" title="Faulhabera formula priekš olimpiādēm" />
+    <published>2025-07-18T18:10:00+03:00</published>
+  
+    <updated>2025-07-18T18:10:00+03:00</updated>
+  
+    <id>https://vijups.eu/posts/faulhaber/</id>
+    <content type="text/html" src="https://vijups.eu/posts/faulhaber/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Matemātika" />
+    
+    <category term="Matemātika olimpiādēm" />
+    
+  
+
+  <summary>Kas ir Faulhabera formula, kādi ir tās nozīmīgākie rezultāti, un saistīti Atklātās matemātikas olimpiādes uzdevumi</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Simsona taisne priekš olimpiādēm</title>
+    <link href="https://vijups.eu/lv/posts/simson-line/" rel="alternate" type="text/html" title="Simsona taisne priekš olimpiādēm" />
+    <published>2025-07-12T13:55:00+03:00</published>
+  
+    <updated>2025-07-12T13:55:00+03:00</updated>
+  
+    <id>https://vijups.eu/posts/simson-line/</id>
+    <content type="text/html" src="https://vijups.eu/posts/simson-line/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Matemātika" />
+    
+    <category term="Matemātika olimpiādēm" />
+    
+  
+
+  <summary>Kas ir Simsona taisne, kā arī saistīts Atklātās matemātikas olimpiādes uzdevums</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Košī nevienādība priekš olimpiādēm</title>
+    <link href="https://vijups.eu/lv/posts/cauchy-inequality/" rel="alternate" type="text/html" title="Košī nevienādība priekš olimpiādēm" />
+    <published>2025-07-11T16:55:00+03:00</published>
+  
+    <updated>2025-07-11T16:55:00+03:00</updated>
+  
+    <id>https://vijups.eu/posts/cauchy-inequality/</id>
+    <content type="text/html" src="https://vijups.eu/posts/cauchy-inequality/" />
+    <author>
+      <name>Artis Vijups</name>
+    </author>
+
+  
+    
+    <category term="Matemātika" />
+    
+    <category term="Matemātika olimpiādēm" />
+    
+  
+
+  <summary>Ieskats Košī nevienādībā un Atklātās matemātikas olimpiādes uzdevumos</summary>
+
+  </entry>
+
+</feed>
+
+

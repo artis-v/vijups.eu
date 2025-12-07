@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Election Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+    * {
+      font-family: 'Commissioner';
+    }
+    html, body, #map {
+      height: 65vw;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      background: #102526;
+    }
+    
+    .label-text {
+      width: 100px;      /* match iconSize width */
+      height: 20px;      /* match iconSize height */
+      line-height: 20px; /* vertically center text */
+      text-align: center; /* horizontally center text */
+      font-weight: 600;
+      color: white;
+      white-space: nowrap;
+      font-size: 1.2vw;
+      pointer-events: none !important;
+    }
+
+    .leaflet-tooltip.leaflet-tooltip-custom {
+    background-color: rgba(5, 15, 16, 0.9);
+    border-color: #8ba1a2;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 0px;
+    font-family: 'Commissioner', sans-serif;
+    line-height: 1.3;
+    pointer-events: none;
+    white-space: normal;
+    min-width: 150px;
+    max-width: 200px;
+    }
+
+    .custom-tooltip .place-name {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-bottom: 4px;
+    }
+
+    .custom-tooltip .winner-label {
+    font-size: 8pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #8ba1a2;
+    margin-bottom: 2px;
+    }
+
+    .custom-tooltip .winner-name {
+    font-size: 10pt;
+    font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Local Leaflet Pattern Plugin -->
+  <script src="leaflet.pattern.js"></script>
+
+  <script>
+    // Initialize map without background, and disable interactions
+    const map = L.map('map', {
+      zoomSnap: 0,   // allow fractional zoom, no snapping
+      zoomDelta: 0.05, // zoom increments of 0.25
+      zoomControl: false,
+      dragging: false,
+      scrollWheelZoom: false,
+      doubleClickZoom: false,
+      boxZoom: false,
+      keyboard: false,
+      touchZoom: false
+    });
+
+    const labelOffsets = {
+        "Dienvidkurzemes nov.": [-20, -20],
+        "Jelgavas nov.": [0, -15],
+        "Olaines nov.": [0, -10],
+        "Ķekavas nov.": [0, 5],
+        "Ropažu nov.": [5, 0],
+        "Salaspils nov.": [10, 0],
+        "Valkas nov.": [15, -10],
+        "Jēkabpils nov.": [-25, 0],
+        "Preiļu nov.": [0, -20],
+        "Augšdaugavas nov.": [0, 20],
+        "Ludzas nov.": [5, -5],
+        "Rēzeknes nov.": [-10, 25]
+    };
+
+    // Load GeoJSON from file
+    fetch('election_data.geojson')
+      .then(response => response.json())
+      .then(data => {
+        const geojsonLayer = L.geoJSON(data, {
+          onEachFeature: function (feature, layer) {
+            const backgroundLayer = L.geoJSON(feature, {
+            style: {
+                fillColor: feature.properties.secondaryColor,
+                color: '#050f10',
+                weight: 1,
+                fillOpacity: 1
+            }
+            }).addTo(map);
+
+            // Stripe pattern
+            const pattern = new L.StripePattern({
+              weight: 6,
+              spaceWeight: 6,
+              color: feature.properties.mainColor,
+              opacity: 1, // fully opaque
+              angle: 45
+            });
+            pattern.addTo(map);
+
+            // Apply style with no transparency
+            layer.setStyle({
+              fillPattern: pattern,
+              color: '#050f10',
+              weight: 1,
+              fillOpacity: 1 // no transparency
+            });
+
+            // Hover tooltip showing winner
+            layer.bindTooltip(`
+            <div class="custom-tooltip">
+                <div class="place-name">${feature.properties.LABEL}</div>
+                <div class="winner-label">UZVARĒTĀJS</div>
+                <div class="winner-name">${feature.properties.winner}</div>
+            </div>
+            `, {
+            sticky: true,
+            direction: 'auto',
+            className: 'leaflet-tooltip-custom', // avoid Leaflet default styles
+            permanent: false
+            });
+          }
+        });
+
+        geojsonLayer.addTo(map);
+        map.fitBounds(geojsonLayer.getBounds(), { padding: [20, 20] }); // Zoom to fit
+        map.touchZoom.disable();
+
+        const mapContainer = document.getElementById('map');
+        const resizeObserver = new ResizeObserver(() => {
+            map.invalidateSize();
+
+  // Once map has finished moving/zooming after invalidateSize,
+  // fit bounds. But invalidateSize itself does not trigger moveend,
+  // so we force a one-time listener on the next idle event.
+
+  // Use map.once() to run code once after next movement ends
+  map.once('moveend zoomend', () => {
+    geojsonLayer && map.fitBounds(geojsonLayer.getBounds(), { padding: [20, 20] });
+  });
+
+  // To trigger a "moveend" after invalidateSize, setView or flyTo current center:
+  // This nudges Leaflet into firing moveend, so our listener runs:
+  map.setView(map.getCenter(), map.getZoom(), { animate: false });
+        });
+        resizeObserver.observe(mapContainer);
+
+        // Wait for map to finish rendering, then add labels
+        map.whenReady(() => {
+        geojsonLayer.eachLayer(layer => {
+            const label = layer.feature.properties.LABEL;
+            const center = layer.getBounds().getCenter();
+            const offset = labelOffsets[label] || [0, 0];
+
+            const projected = map.latLngToLayerPoint(center);
+            const offsetPoint = L.point(projected.x + offset[0], projected.y - offset[1]);
+            const offsetLatLng = map.layerPointToLatLng(offsetPoint);
+
+            L.marker(offsetLatLng, {
+            icon: L.divIcon({
+                className: 'label-text',
+                html: label,
+                iconSize: [100, 20],
+                iconAnchor: [50, 10]
+            }),
+            interactive: false
+            }).addTo(map);
+        });
+        });
+      })      
+  </script>
+
+</body>
+</html>

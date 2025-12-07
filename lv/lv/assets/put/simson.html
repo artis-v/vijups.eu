@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simson</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+    body {
+      margin: 0;
+      background-color: #102526;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<script>
+let A, B, C, P, O, r;
+
+function setup() {
+  createCanvas(windowWidth, windowWidth * 3 / 5);
+  textFont('Commissioner');
+  textSize(16);
+  updateDiagram();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowWidth * 3 / 5);
+  updateDiagram();
+}
+
+function updateDiagram() {
+  r = height * 0.4;
+  O = createVector(width / 2, height / 2);
+  A = pointOnCircle(1/9);
+  B = pointOnCircle(3/5);
+  C = pointOnCircle(3/2);
+  P = pointOnCircle(4/5);
+}
+
+function pointOnCircle(frac) {
+  return createVector(O.x + r * cos(frac * PI), O.y - r * sin(frac * PI))
+}
+
+function drawCircle() {
+  stroke('#44666B');
+  noFill();
+  strokeWeight(1.5);
+  ellipse(O.x, O.y, 2 * r, 2 * r);
+}
+
+function drawTriangle() {
+  stroke('#88C0D0');
+  strokeWeight(2);
+  fill('#18343A');
+  triangle(A.x, A.y, B.x, B.y, C.x, C.y);
+}
+
+function draw() {
+  background('#102526');
+  strokeCap(ROUND);
+  strokeJoin(ROUND);
+
+  if (mouseIsPressed) {
+    let angle = atan2(mouseY - O.y, mouseX - O.x);
+    P.x = O.x + r * cos(angle);
+    P.y = O.y + r * sin(angle);
+  }
+
+  drawCircle();
+  drawTriangle();
+  drawPoint(A, 'A');
+  drawPoint(B, 'B', '#FFFFFF', 4);
+  drawPoint(C, 'C', '#FFFFFF', 4, 22);
+  drawPoint(P, 'D', '#FF5C5C', -14);
+
+  let footAB = perpendicularFoot(P, A, B);
+  let footBC = perpendicularFoot(P, B, C);
+  let footCA = perpendicularFoot(P, C, A);
+
+  drawFoot(footAB);
+  extendLine(footAB, A, B);
+  drawFoot(footBC);
+  extendLine(footBC, B, C);
+  drawFoot(footCA);
+  extendLine(footCA, C, A)
+
+  stroke('#FF5C5C');
+  strokeWeight(2);
+  line(footAB.x, footAB.y, footBC.x, footBC.y);
+  line(footBC.x, footBC.y, footCA.x, footCA.y);
+  line(footCA.x, footCA.y, footAB.x, footAB.y);
+}
+
+function drawPoint(v, label, col = '#FFFFFF', shiftx = 6, shifty = -4) {
+  fill(col);
+  noStroke();
+  ellipse(v.x, v.y, 6, 6);
+  textAlign(LEFT, BOTTOM);
+  text(label, v.x + shiftx, v.y + shifty);
+}
+
+function drawFoot(v) {
+  fill('#FF5C5C');
+  noStroke();
+  ellipse(v.x, v.y, 6, 6);
+  stroke('#A14545');
+  strokeWeight(1);
+  line(v.x, v.y, P.x, P.y);
+}
+
+function extendLine(v, a, b) {
+  let ab = p5.Vector.sub(b, a);
+  let av = p5.Vector.sub(v, a);
+  let proj = av.dot(ab) / ab.magSq();
+  let distToA = p5.Vector.dist(v, a);
+  let distToB = p5.Vector.dist(v, b);
+  let closer = distToA < distToB ? a : b;
+  let further = distToA < distToB ? b : a;
+  if (proj < 0 || proj > 1) {
+    drawingContext.save();
+    drawingContext.setLineDash([3, 3]);
+    stroke('#88C0D0');
+    line(v.x, v.y, closer.x, closer.y, 5);
+    drawingContext.restore();
+  }
+  rightTick(further, v, P);
+}
+
+function rightTick(a, f, p) {
+  let pf = p5.Vector.sub(p, f).normalize().mult(10);
+  let af = p5.Vector.sub(a, f).normalize().mult(10);
+
+  let pp = p5.Vector.add(f, pf);
+  let pa = p5.Vector.add(f, af);
+  let corner = p5.Vector.add(pp, p5.Vector.sub(pa, f));
+
+  line(corner.x, corner.y, pp.x, pp.y);
+  line(corner.x, corner.y, pa.x, pa.y);
+}
+
+function perpendicularFoot(p, a, b) {
+  let ap = p5.Vector.sub(p, a);
+  let ab = p5.Vector.sub(b, a);
+  let t = ap.dot(ab) / ab.magSq();;
+  return p5.Vector.add(a, ab.mult(t));
+}
+</script>
+</body>
+</html>
